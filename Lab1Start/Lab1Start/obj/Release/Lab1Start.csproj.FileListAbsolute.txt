@@ -1,0 +1,15 @@
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\bin\Release\Lab1Start.exe.config
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\bin\Release\Lab1Start.exe
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\bin\Release\Lab1Start.pdb
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\MainWindow.g.cs
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\App.g.cs
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start_MarkupCompile.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start_MarkupCompile.lref
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\MainWindow.baml
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.g.resources
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.Properties.Resources.resources
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.csproj.GenerateResource.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.csproj.CoreCompileInputs.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.exe
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.pdb
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Release\Lab1Start.csprojAssemblyReference.cache

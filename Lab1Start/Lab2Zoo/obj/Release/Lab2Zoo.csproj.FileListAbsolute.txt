@@ -1,0 +1,15 @@
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\bin\Release\Lab2Zoo.exe.config
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\bin\Release\Lab2Zoo.exe
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\bin\Release\Lab2Zoo.pdb
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.csprojAssemblyReference.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\MainWindow.g.cs
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\App.g.cs
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo_MarkupCompile.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo_MarkupCompile.lref
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\MainWindow.baml
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.g.resources
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.Properties.Resources.resources
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.csproj.GenerateResource.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.csproj.CoreCompileInputs.cache
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.exe
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Release\Lab2Zoo.pdb
