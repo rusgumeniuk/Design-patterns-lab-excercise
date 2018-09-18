@@ -10,10 +10,10 @@ namespace Lab1Start.Models
 {
     class Builder : IBuilder
     {
-        public const byte MAX_NUMBER_OF_BRICKS_BY_ONE_TIME = 20;
+        private const byte MAX_NUMBER_OF_BRICKS_BY_ONE_TIME = 20;
 
         #region Prop
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public bool IsOnWork { get; set; } 
         public bool IsOnTimeout { get; set; } = false;        
@@ -25,7 +25,7 @@ namespace Lab1Start.Models
         #region Constr
         public Builder(string name)
         {
-            Name = name;
+            Name = name;                      
         }
         public Builder(string name, bool isOnWork) : this(name)
         {

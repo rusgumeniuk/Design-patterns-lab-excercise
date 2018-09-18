@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Lab2Zoo.Models.Animals;
+using Lab2Zoo.Models.Cages;
 
 namespace Lab2Zoo.Models
 {
@@ -16,39 +17,41 @@ namespace Lab2Zoo.Models
 
     class Zoo : Base
     {
-        public List<Animal> Animals { get; set; } = new List<Animal>();
+        public List<Cage<Animal>> Cages { get; set; } = new List<Cage<Animal>>();
         public DayMode CurrentMode { get; set; } = DayMode.Day;
 
-        public string CreateRandomAnimal()
+        public Animal GetRandomAnimal()
         {
-            int randomNumber = (new Random().Next(1, 10));
-            Animal animal = randomNumber > 8 ? new Giraffe() : (randomNumber < 5 ? (Animal)new Wolf() : (Animal)new Bear());            
-
-            Animals.Add(animal);
-            return animal.GetType() + " was added";
+            return Factories.Factory.CreateRandomAnimal();
         }
+
         public string GetVoicesOfAllZoo()
         {
-            if (Animals.Count < 1) return "We can hear noone because the zoo has not any animal";
+            if (Cages.Count < 1) return "We can hear noone because the zoo has not any animal";
             StringBuilder stringBuilder = new StringBuilder();
             if(CurrentMode == DayMode.Night)
             {
-                foreach (var item in Animals)
+                foreach (var cage in Cages)
                 {
-                    if(item.IsSleeping)
-                        item.WakeUp();
-                    stringBuilder.Append(item.Voice());
+                    foreach (var animal in cage.Animals)
+                    {
+                        if (animal.IsSleeping)
+                            animal.WakeUp();
+                        stringBuilder.Append(animal.Voice());
+                    }                   
                 }
             }
             else
             {
-                foreach (var item in Animals)
+                foreach (var item in Cages)
                 {
-                    stringBuilder.Append(item.Voice());
+                    foreach (var animal in item.Animals)
+                    {
+                        stringBuilder.Append(animal.Voice());
+                    }                    
                 }
             }
             return stringBuilder.ToString();
         }
-
     }
 }

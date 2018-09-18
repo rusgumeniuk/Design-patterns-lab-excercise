@@ -19,11 +19,10 @@
             <ListView             
                 x:Name="ListOfBuilders"
                 HorizontalAlignment="Left"
-                Height="Auto"
                 VerticalAlignment="Top"
+                Height="Auto"                
                 Width="Auto"
-                SelectionChanged="ListOfBuilders_SelectionChanged"
-                
+                SelectionChanged="ListOfBuilders_SelectionChanged"                
                 >                
                 <ListView.View>                    
                     <GridView>

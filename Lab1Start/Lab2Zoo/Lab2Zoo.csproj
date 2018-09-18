@@ -74,6 +74,15 @@
     <Compile Include="Models\Animals\Giraffe.cs" />
     <Compile Include="Models\Animals\Wolf.cs" />
     <Compile Include="Models\Base.cs" />
+    <Compile Include="Models\Cages\BearCage.cs" />
+    <Compile Include="Models\Cages\Cage.cs" />
+    <Compile Include="Models\Cages\GiraffeCage.cs" />
+    <Compile Include="Models\Cages\WolfCage.cs" />
+    <Compile Include="Models\Factories\BearFactory.cs" />
+    <Compile Include="Models\Factories\Factory.cs" />
+    <Compile Include="Models\Factories\GiraffeFactory.cs" />
+    <Compile Include="Models\Factories\WolfFactory.cs" />
+    <Compile Include="Models\IAnimal.cs" />
     <Compile Include="Models\Zoo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -100,5 +109,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

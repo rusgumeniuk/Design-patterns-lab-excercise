@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2Zoo.Models
 {
-    abstract class Animal : Base
+    abstract class Animal : Base, IAnimal
     {
         private ushort weight = 0;        
 
@@ -27,7 +27,6 @@ namespace Lab2Zoo.Models
         {
             IsSleeping = false;
         }
-        public abstract string Voice();
-        
+        public abstract string Voice();        
     }
 }
