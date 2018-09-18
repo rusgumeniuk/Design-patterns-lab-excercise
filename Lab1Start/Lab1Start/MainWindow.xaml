@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab1Start"
         mc:Ignorable="d"
-        Title="Builders" Height="350.565" Width="367.107">
+        Title="Builders" Height="275" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="1.5*"/>            
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="2.25*"/>            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <StackPanel Grid.Row="0" Grid.Column="0">
+        <StackPanel Grid.Row="0" Grid.Column="0" CanHorizontallyScroll="False">
             <ListView             
                 x:Name="ListOfBuilders"
                 HorizontalAlignment="Left"
@@ -23,6 +23,7 @@
                 VerticalAlignment="Top"
                 Width="Auto"
                 SelectionChanged="ListOfBuilders_SelectionChanged"
+                
                 >                
                 <ListView.View>                    
                     <GridView>
@@ -31,41 +32,45 @@
                 </ListView.View>
             </ListView>
         </StackPanel>
-        
+
         <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" x:Name="StackPanelBuilderInfo">
-            <Label x:Name="LblbuilderName" Content="Label"/>
+            <Label x:Name="LblbuilderName" Content="Label" Margin="0,0,0,5" HorizontalContentAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                <GroupBox x:Name="GBOnWork" Header="Is builder on work?" IsEnabled="False"
-                      HorizontalAlignment="Left" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="131">
-                    <StackPanel>
-                        <RadioButton x:Name="RBOnWork" Content="On work"/>
-                        <RadioButton x:Name="RBNotOnWork" Content="Not on work"/>
-                    </StackPanel>
-                </GroupBox>
-                <StackPanel HorizontalAlignment="Stretch">
-                    <Button x:Name="BtnStartWork" Content="Start work" Click="BtnStartWork_Click" HorizontalAlignment="Center"/>
-                    <Button x:Name="BtnFinishWork" Content="FinishWork" Click="BtnFinishWork_Click"/>
-                </StackPanel>
+                <Button x:Name="BtnStartWork" Content="Start work" Click="BtnStartWork_Click" Margin="50,0,50,0"/>
+                <Button x:Name="BtnFinishWork" Content="FinishWork" Click="BtnFinishWork_Click" Margin="0,0,50,0"/>                                                            
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <GroupBox x:Name="GBTimeout" Header="Is builder on timeout" IsEnabled="False" HorizontalAlignment="Left" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="131">
-                    <StackPanel>
-                        <RadioButton x:Name="RBOnTimeOut" Content="Yes"/>
-                        <RadioButton x:Name="RBNotOnTimeout" Content="No"/>
-                    </StackPanel>
-                </GroupBox>
-                <StackPanel HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <GroupBox x:Name="GBOnWork" Header="Is builder on work?" IsEnabled="False"
+                      HorizontalAlignment="Left" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="131">
+                        <StackPanel>
+                            <RadioButton x:Name="RBOnWork" Content="On work"/>
+                            <RadioButton x:Name="RBNotOnWork" Content="Not on work"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="GBTimeout" Header="Is builder on timeout" IsEnabled="False" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="131"
+                              Margin="5,0,0,0">
+                        <StackPanel>
+                            <RadioButton x:Name="RBOnTimeOut" Content="Yes"/>
+                            <RadioButton x:Name="RBNotOnTimeout" Content="No"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>                                
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                <StackPanel HorizontalAlignment="Stretch" >
                     <Button x:Name="BtnDoTimeout" Content="Do timeout" Click="BtnDoTimeout_Click"/>
                     <TextBlock Text="Enter length of timeout:"/>
                     <TextBox x:Name="TextBoxTimeoutLength"/>
-                </StackPanel>                
-            </StackPanel>          
-            <StackPanel HorizontalAlignment="Left">
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
                     <Button x:Name="BtnPutBricks" Content="Put bricks" Click="BtnPutBricks_Click"/>
                     <TextBlock Text="Enter number of bricks:"/>
-                    <TextBox x:Name="TextBoxCountOfBricks"/>           
+                    <TextBox x:Name="TextBoxCountOfBricks"/>
+                </StackPanel>
             </StackPanel>
-            <TextBlock x:Name="TextBlockTotalInfo"/>
-        </StackPanel>              
+            <TextBlock x:Name="TextBlockTotalInfo" TextAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Window>
