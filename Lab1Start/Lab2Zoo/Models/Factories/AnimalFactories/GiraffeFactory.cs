@@ -7,9 +7,9 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
-    public class GiraffeFactory : AnimalFactory<Giraffe>
+    public class GiraffeFactory : AnimalFactory
     {
-        public override Giraffe CreateNewObject()
+        public override BaseEntity CreateNewObject()
         {
             return new Giraffe();
         }

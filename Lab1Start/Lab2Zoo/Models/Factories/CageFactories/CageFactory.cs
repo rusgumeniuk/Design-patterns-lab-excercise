@@ -8,9 +8,7 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.CageFactories
 {
-    public abstract class CageFactory<T> : BaseFactory<T>
-        where T : BaseEntity   
-        
+    public abstract class CageFactory : BaseFactory                
     {
 
     }

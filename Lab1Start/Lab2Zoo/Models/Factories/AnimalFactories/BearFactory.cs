@@ -6,9 +6,9 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
-    public class BearFactory : AnimalFactory<Bear>
+    public class BearFactory : AnimalFactory
     {
-        public override Bear CreateNewObject()
+        public override BaseEntity CreateNewObject()
         {
             return new Bear();
         }

@@ -8,9 +8,9 @@ using Lab2Zoo.Models.Cages.GiraffeCages;
 
 namespace Lab2Zoo.Models.Factories.CageFactories.GiraffeCageFactory
 {
-    public class AdultGiraffeCageFactory : CageFactory<GiraffeAdultCage>
+    public class AdultGiraffeCageFactory : CageFactory
     {
-        public override GiraffeAdultCage CreateNewObject()
+        public override BaseEntity CreateNewObject()
         {
             return new GiraffeAdultCage();
         }

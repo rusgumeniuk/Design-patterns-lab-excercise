@@ -5,9 +5,8 @@ using System.Text;
 
 namespace Lab2Zoo.Models.Factories
 {
-    public abstract class BaseFactory<T> : BaseEntity
-        where T : BaseEntity
+    public abstract class BaseFactory
     {
-        public abstract T CreateNewObject();
+        public abstract BaseEntity CreateNewObject();
     }
 }

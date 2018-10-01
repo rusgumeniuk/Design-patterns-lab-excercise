@@ -7,8 +7,7 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
-    public abstract class WolfFactory<T> : AnimalFactory<T>
-        where T : Wolf
+    public abstract class WolfFactory : AnimalFactory        
     {
     }
 }

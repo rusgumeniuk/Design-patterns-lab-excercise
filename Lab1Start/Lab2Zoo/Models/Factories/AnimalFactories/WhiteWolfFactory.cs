@@ -7,9 +7,9 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
-    public class WhiteWolfFactory : WolfFactory<WhiteWolf>
+    public class WhiteWolfFactory : WolfFactory
     {
-        public override WhiteWolf CreateNewObject()
+        public override BaseEntity CreateNewObject()
         {
             return new WhiteWolf();
         }

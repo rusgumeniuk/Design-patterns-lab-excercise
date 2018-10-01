@@ -7,33 +7,32 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
-    public abstract class AnimalFactory<T> : BaseFactory<T>
-        where T : Animal
+    public abstract class AnimalFactory : BaseFactory       
     {
-        public static Animal CreateRandomAnimal()
+        public static BaseEntity CreateRandomAnimal()
         {
             byte randomNumber = (byte)(new Random().Next(1, 10));
             bool wolfRandom = new Random().Next(0, 1) == 1;
 
-            AnimalFactory<Animal> factory = null;
+            AnimalFactory factory = null;
 
             if (randomNumber > 8)
             {
-                factory = (AnimalFactory<Animal>)new GiraffeFactory();
+                factory = (AnimalFactory)new GiraffeFactory();
             }
             else if (randomNumber < 5)
             {
-                factory = (AnimalFactory<Bear>)new BearFactory();
+                factory = new BearFactory();
             }
             else
             {
                 if (wolfRandom)
                 {
-                    factory = (BaseFactory<Animal>)new GreyWolfFactory();
+                    factory = new GreyWolfFactory();
                 }
                 else
                 {
-                    factory = (BaseFactory<Wolf>)new WhiteWolfFactory();
+                    factory = new WhiteWolfFactory();
                 }
             }
 

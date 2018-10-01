@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 
 using Lab2Zoo.Models.Animals;
-using Lab2Zoo.Models.Cages;
+using Lab2Zoo.Models.Cages.BearCages;
 
 namespace Lab2Zoo.Models.Factories.CageFactories.BearCageFactory
 {
-    public class FemaleBearCageFactory : CageFactory<FemaleBearCageFactory>
+    public class FemaleBearCageFactory : CageFactory
     {
-        public override FemaleBearCageFactory CreateNewObject()
+        public override BaseEntity CreateNewObject()
         {
-            throw new NotImplementedException();
+            return new BearFemaleCage();
         }
     }
 }

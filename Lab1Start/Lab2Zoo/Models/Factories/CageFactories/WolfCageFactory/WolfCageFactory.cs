@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 
 using Lab2Zoo.Models.Animals;
-using Lab2Zoo.Models.Cages;
-
+using Lab2Zoo.Models.Cages.WolfCages;
 namespace Lab2Zoo.Models.Factories.CageFactories.WolfCageFactory
 {
-    public class WolfCageFactory : CageFactory<WolfCageFactory>
+    public class WolfCageFactory : CageFactory
     {
-        public override WolfCageFactory CreateNewObject()
+        public override BaseEntity CreateNewObject()
         {
-            return new WolfCageFactory();
+            return new WolfCage<Wolf>();
         }
     }
 }
