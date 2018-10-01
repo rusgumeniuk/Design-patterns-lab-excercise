@@ -8,8 +8,8 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.CageFactories
 {
-    public abstract class CageFactory : BaseFactory                
+    public abstract class CageFactory<T> where T : Animal              
     {
-
+        public abstract Cage<T> CreateCage();
     }
 }

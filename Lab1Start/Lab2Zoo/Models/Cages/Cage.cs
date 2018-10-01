@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Lab2Zoo.Models.Animals;
+
 namespace Lab2Zoo.Models.Cages
 {
     public class Cage<T> : BaseEntity, IComponent
-        where T : Animals.Animal
+        where T : Animal
     {
         public List<IComponent> Components = new List<IComponent>();
 

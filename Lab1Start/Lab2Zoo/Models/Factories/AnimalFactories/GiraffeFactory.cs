@@ -9,7 +9,7 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
     public class GiraffeFactory : AnimalFactory
     {
-        public override BaseEntity CreateNewObject()
+        public override Animal CreateAnimal()
         {
             return new Giraffe();
         }

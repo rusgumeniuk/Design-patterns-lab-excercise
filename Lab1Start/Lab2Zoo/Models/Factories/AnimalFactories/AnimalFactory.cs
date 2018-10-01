@@ -7,9 +7,9 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
-    public abstract class AnimalFactory : BaseFactory       
+    public abstract class AnimalFactory       
     {
-        public static BaseEntity CreateRandomAnimal()
+        public static Animal CreateRandomAnimal()
         {
             byte randomNumber = (byte)(new Random().Next(1, 10));
             bool wolfRandom = new Random().Next(0, 1) == 1;
@@ -36,7 +36,9 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
                 }
             }
 
-            return factory.CreateNewObject();
+            return factory.CreateAnimal();
         }
+
+        public abstract Animal CreateAnimal();
     }
 }

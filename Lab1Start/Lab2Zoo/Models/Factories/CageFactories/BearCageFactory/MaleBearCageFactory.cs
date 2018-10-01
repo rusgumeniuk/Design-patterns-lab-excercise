@@ -5,12 +5,13 @@ using System.Text;
 
 using Lab2Zoo.Models.Animals;
 using Lab2Zoo.Models.Cages.BearCages;
+using Lab2Zoo.Models.Cages;
 
 namespace Lab2Zoo.Models.Factories.CageFactories.BearCageFactory
 {
-    public class MaleBearCageFactory : CageFactory
+    public class MaleBearCageFactory : CageFactory<Bear>
     {
-        public override BaseEntity CreateNewObject()
+        public override Cage<Bear> CreateCage()
         {
             return new BearMaleCage();
         }

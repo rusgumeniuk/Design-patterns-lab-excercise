@@ -5,12 +5,13 @@ using System.Text;
 
 using Lab2Zoo.Models.Animals;
 using Lab2Zoo.Models.Cages.GiraffeCages;
+using Lab2Zoo.Models.Cages;
 
 namespace Lab2Zoo.Models.Factories.CageFactories.GiraffeCageFactory
 {
-    public class AdultGiraffeCageFactory : CageFactory
+    public class AdultGiraffeCageFactory : CageFactory<Giraffe>
     {
-        public override BaseEntity CreateNewObject()
+        public override Cage<Giraffe> CreateCage()
         {
             return new GiraffeAdultCage();
         }

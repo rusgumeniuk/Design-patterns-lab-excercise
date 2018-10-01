@@ -9,9 +9,9 @@ using Lab2Zoo.Models.Cages.BearCages;
 
 namespace Lab2Zoo.Models.Factories.CageFactories.BearCageFactory
 {
-    public class BearCageFactory : CageFactory      
+    public class BearCageFactory : CageFactory<Bear>   
     {
-        public override BaseEntity CreateNewObject()
+        public override Cage<Bear> CreateCage()
         {
             return new BearCage();
         }    

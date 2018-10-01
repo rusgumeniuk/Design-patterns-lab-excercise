@@ -8,7 +8,7 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
 {
     public class BearFactory : AnimalFactory
     {
-        public override BaseEntity CreateNewObject()
+        public override Animal CreateAnimal()
         {
             return new Bear();
         }
