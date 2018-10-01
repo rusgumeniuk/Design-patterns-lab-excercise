@@ -55,35 +55,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Factories\CageFactories\CageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\GiraffeCageFactory\AdultGiraffeCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\BearCageFactory\BearCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\GiraffeCageFactory\ChildrenGiraffeCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\BearCageFactory\FemaleBearCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\GiraffeCageFactory\GiraffeCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\WolfCageFactory\GreyWolfCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\BearCageFactory\MaleBearCageFactory.cs" />
+    <Compile Include="Models\Enums\MaleMode.cs" />
+    <Compile Include="Models\Factories\AnimalFactories\GreyWolfFactory.cs" />
+    <Compile Include="Models\Factories\AnimalFactories\AnimalFactory.cs" />
+    <Compile Include="Models\Factories\AnimalFactories\BearFactory.cs" />
+    <Compile Include="Models\Factories\AnimalFactories\GiraffeFactory.cs" />
+    <Compile Include="Models\Factories\BaseFactory.cs" />
+    <Compile Include="Models\Enums\DayMode.cs" />
+    <Compile Include="Models\Cages\BearCages\BearCage.cs" />
+    <Compile Include="Models\Cages\BearCages\BearFemaleCage.cs" />
+    <Compile Include="Models\Cages\BearCages\BearMaleCage.cs" />
+    <Compile Include="Models\Cages\GiraffeCages\GiraffeAdultCage.cs" />
+    <Compile Include="Models\Cages\GiraffeCages\GiraffeCage.cs" />
+    <Compile Include="Models\Cages\GiraffeCages\GiraffeChildrenCage.cs" />
+    <Compile Include="Models\Cages\WolfCages\GreyWolfCage.cs" />
+    <Compile Include="Models\Cages\Cage.cs" />
+    <Compile Include="Models\Animals\Bear.cs" />
+    <Compile Include="Models\Animals\GreyWolf.cs" />
+    <Compile Include="Models\Animals\WhiteWolf.cs" />
+    <Compile Include="Models\Animals\Wolf.cs" />
+    <Compile Include="Models\Cages\WolfCages\WhiteWolfCage.cs" />
+    <Compile Include="Models\Cages\WolfCages\WolfCage.cs" />
+    <Compile Include="Models\Zoo.cs" />
+    <Compile Include="Models\Factories\AnimalFactories\WolfFactory.cs" />
+    <Compile Include="Models\Factories\AnimalFactories\WhiteWolfFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\WolfCageFactory\WhiteWolfCageFactory.cs" />
+    <Compile Include="Models\Factories\CageFactories\WolfCageFactory\WolfCageFactory.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Models\Animals\Giraffe.cs" />
+    <Compile Include="Models\Animals\Animal.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\IComponent.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Animal.cs" />
-    <Compile Include="Models\Animals\Bear.cs" />
-    <Compile Include="Models\Animals\Giraffe.cs" />
-    <Compile Include="Models\Animals\Wolf.cs" />
-    <Compile Include="Models\Base.cs" />
-    <Compile Include="Models\Cages\BearCage.cs" />
-    <Compile Include="Models\Cages\Cage.cs" />
-    <Compile Include="Models\Cages\GiraffeCage.cs" />
-    <Compile Include="Models\Cages\WolfCage.cs" />
-    <Compile Include="Models\Factories\BearFactory.cs" />
-    <Compile Include="Models\Factories\Factory.cs" />
-    <Compile Include="Models\Factories\GiraffeFactory.cs" />
-    <Compile Include="Models\Factories\WolfFactory.cs" />
-    <Compile Include="Models\IAnimal.cs" />
-    <Compile Include="Models\Zoo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +124,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Diagrams\ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

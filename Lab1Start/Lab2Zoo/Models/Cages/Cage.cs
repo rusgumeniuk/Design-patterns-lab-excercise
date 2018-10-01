@@ -2,14 +2,36 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab2Zoo.Models.Cages
 {
-    abstract class Cage<T> : Base
-        where T : Animal
+    public class Cage<T> : BaseEntity, IComponent
+        where T : Animals.Animal
     {
-        public List<T> Animals = new List<T>();
-        public List<Cage<T>> Cages = new List<Cage<T>>();
+        public List<IComponent> Components = new List<IComponent>();
+
+        public string Voice()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var component in Components)
+            {
+                stringBuilder.Append(component.Voice());
+            }
+            return stringBuilder.ToString();
+        }
+
+        public virtual void Add(IComponent component)
+        {
+            Components.Add(component);
+        }
+        public virtual void Remove(IComponent component)
+        {
+            Components.Remove(component);
+        }
+
+        public virtual IComponent GetChild(int index)
+        {
+            return Components[index];
+        }
     }
 }
