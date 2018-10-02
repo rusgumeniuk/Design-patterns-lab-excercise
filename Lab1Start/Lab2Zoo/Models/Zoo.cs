@@ -10,13 +10,17 @@ namespace Lab2Zoo.Models
 {
     public class Zoo : Container
     {
-        public DayMode CurrentDayMode = DayMode.Day;             
+        public DayMode CurrentDayMode = DayMode.Day;
 
         public Animal GetRandomAnimal()
         {
             return Factories.AnimalFactories.AnimalFactory.CreateRandomAnimal();
+        }                
+
+        public void ChangeDayMode(DayMode mode)
+        {
+            CurrentDayMode = mode;
         }
-                
         
         public override string Voice()
         {
@@ -33,15 +37,9 @@ namespace Lab2Zoo.Models
             {
                 foreach (var item in Components)
                 {
-                    if (item is Animal)
-                    {
-                        if((item as Animal).IsSleeping)
-                        {
-                            stringBuilder.Append((item as Animal).WakeUp() + " : ");                            
-                        }
-                        stringBuilder.Append((item as Animal).Voice());
-                    }
-                    else stringBuilder.Append(item.Voice());
+                    if (item is Animal && (item as Animal).IsSleeping)
+                        stringBuilder.Append((item as Animal).WakeUp() + " : ");
+                    stringBuilder.Append(item.Voice());
                 }
             }
 
