@@ -3,7 +3,7 @@
   <Class Name="Lab2Zoo.Models.Component">
     <Position X="11.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAICAAAACAAAAAAAAAIABAAAAAAgAAAAAAQAAAAAAAg=</HashCode>
+      <HashCode>AAICAAAACAAAAAAEAAIABAAAAAAgAAIAAAQAAAAAAAg=</HashCode>
       <FileName>Models\Component.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -11,7 +11,7 @@
   <Class Name="Lab2Zoo.Models.Animals.Animal">
     <Position X="9.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAIAAAAACAAAAAAAAAIABAQAACAEAAAgAAAAAAAAEAA=</HashCode>
+      <HashCode>gAIAAAAACAAAAAAEAAIABAQAACAEAAAgAAAAAAAAEAA=</HashCode>
       <FileName>Models\Animals\Animal.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -60,7 +60,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Bear">
-    <Position X="9.25" Y="13.25" Width="1.5" />
+    <Position X="9.25" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAg=</HashCode>
       <FileName>Models\Animals\Bear.cs</FileName>
@@ -75,7 +75,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Cages\Cage.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -355,12 +355,12 @@
   <Class Name="Lab2Zoo.Models.Container">
     <Position X="13.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAACAAAAIAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAIAAAAACAAAAIAAAAIABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Container.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Lab2Zoo.Models.IComponent">
-    <Position X="11.5" Y="12.25" Width="1.5" />
+    <Position X="11.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAACAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\IComponent.cs</FileName>
@@ -374,7 +374,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="Lab2Zoo.Models.Enums.MaleMode">
-    <Position X="9.25" Y="15.25" Width="1.5" />
+    <Position X="9.25" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Models\Enums\MaleMode.cs</FileName>

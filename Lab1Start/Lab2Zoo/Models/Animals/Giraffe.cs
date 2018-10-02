@@ -20,6 +20,9 @@ namespace Lab2Zoo.Models.Animals
             }
         }
 
+        internal Giraffe() : base() { }
+        internal Giraffe(byte age) : this() { Age = age; }
+
         public override string Voice()
         {
             return "Huuum";

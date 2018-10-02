@@ -13,5 +13,9 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
         {
             return new Giraffe();
         }
+        public Animal CreateAnimal(byte age)
+        {
+            return new Giraffe(age);
+        }
     }
 }

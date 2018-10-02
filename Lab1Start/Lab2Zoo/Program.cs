@@ -16,9 +16,6 @@ using Lab2Zoo.Models.Factories.CageFactories.BearCageFactory;
 using Lab2Zoo.Models.Factories.CageFactories.GiraffeCageFactory;
 using Lab2Zoo.Models.Factories.CageFactories.WolfCageFactory;
 
-
-
-
 namespace Lab2Zoo
 {
     class Program

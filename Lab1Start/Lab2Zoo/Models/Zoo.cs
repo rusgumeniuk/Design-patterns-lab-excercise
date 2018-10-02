@@ -17,10 +17,7 @@ namespace Lab2Zoo.Models
             return Factories.AnimalFactories.AnimalFactory.CreateRandomAnimal();
         }
                 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        
         public override string Voice()
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -40,7 +37,7 @@ namespace Lab2Zoo.Models
                     {
                         if((item as Animal).IsSleeping)
                         {
-                            (item as Animal).WakeUp();                            
+                            stringBuilder.Append((item as Animal).WakeUp() + " : ");                            
                         }
                         stringBuilder.Append((item as Animal).Voice());
                     }
