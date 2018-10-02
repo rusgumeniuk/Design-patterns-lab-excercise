@@ -16,9 +16,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Giraffe">
-    <Position X="8.25" Y="7.5" Width="1.5" />
+    <Position X="8.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Animals\Giraffe.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -35,12 +35,12 @@
       <Path>
         <Point X="6.25" Y="10.188" />
         <Point X="5.875" Y="10.188" />
-        <Point X="5.875" Y="10.999" />
-        <Point X="5.5" Y="10.999" />
+        <Point X="5.875" Y="11.116" />
+        <Point X="5.5" Y="11.116" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Animals\GreyWolf.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -50,19 +50,19 @@
       <Path>
         <Point X="6.25" Y="10.188" />
         <Point X="5.875" Y="10.188" />
-        <Point X="5.875" Y="9.249" />
-        <Point X="5.5" Y="9.249" />
+        <Point X="5.875" Y="9.366" />
+        <Point X="5.5" Y="9.366" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Animals\WhiteWolf.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Bear">
     <Position X="8.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAg=</HashCode>
       <FileName>Models\Animals\Bear.cs</FileName>
     </TypeIdentifier>
   </Class>
