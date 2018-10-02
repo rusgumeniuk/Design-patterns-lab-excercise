@@ -8,19 +8,21 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models
 {
-    public class Zoo : BaseEntity, IComponent
+    public class Zoo : Container
     {
-        public DayMode CurrentDayMode = DayMode.Day;
-        public List<IComponent> Components = new List<IComponent>();       
+        public DayMode CurrentDayMode = DayMode.Day;             
 
         public Animal GetRandomAnimal()
         {
             return Factories.AnimalFactories.AnimalFactory.CreateRandomAnimal();
         }
                 
-        public string Voice()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string Voice()
         {
-            if (Components.Count < 1) return "No one in zoo";
             StringBuilder stringBuilder = new StringBuilder();
 
             if(CurrentDayMode == DayMode.Day)
@@ -46,31 +48,7 @@ namespace Lab2Zoo.Models
                 }
             }
 
-            return stringBuilder.ToString();
-        }
-
-        public void Add(IComponent component)
-        {
-            Components.Add(component);
-        }
-        public void Remove(IComponent component)
-        {
-            Components.Remove(component);
-        }
-
-        public IComponent GetChild(int index)
-        {
-            if (index < 0 || index >= Components.Count) throw new IndexOutOfRangeException("'" + index + "' is wrong index");
-            return Components[index];
-        }
-        public int GetWeight()
-        {
-            int weight = 0;
-            foreach (var component in Components)
-            {
-                weight += component.GetWeight();
-            }
-            return weight;
+            return stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one in zoo";
         }
     }
 }

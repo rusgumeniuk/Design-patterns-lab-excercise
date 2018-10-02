@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\IHandle.cs" />
+    <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Factories\CageFactories\CageFactory.cs" />
     <Compile Include="Models\Factories\CageFactories\GiraffeCageFactory\AdultGiraffeCageFactory.cs" />
     <Compile Include="Models\Factories\CageFactories\BearCageFactory\BearCageFactory.cs" />
@@ -97,7 +99,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Component.cs" />
     <Compile Include="Models\IComponent.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

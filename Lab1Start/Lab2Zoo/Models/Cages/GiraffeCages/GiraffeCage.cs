@@ -9,7 +9,7 @@ namespace Lab2Zoo.Models.Cages.GiraffeCages
 {
     public class GiraffeCage : Cage<Giraffe>
     {
-        public override void Add(IComponent component)
+        public override void Add(Component component)
         {
             if(component is GiraffeCage || (component is Giraffe))
             {

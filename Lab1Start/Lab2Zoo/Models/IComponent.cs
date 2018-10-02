@@ -7,10 +7,10 @@ namespace Lab2Zoo.Models
 {
     public interface IComponent
     {
-        void Add(IComponent component);
-        IComponent GetChild(int index);
+        void Add(Component component);
+        Component GetChild(int index);
         string Voice();
         int GetWeight();
-        void Remove(IComponent component);
+        void Remove(Component component);
     }
 }

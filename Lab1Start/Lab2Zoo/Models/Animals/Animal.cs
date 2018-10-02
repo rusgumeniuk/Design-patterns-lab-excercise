@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Lab2Zoo.Models.Animals
 {
-    public abstract class Animal : BaseEntity, IComponent
+    public abstract class Animal : Component
     {
         private string name = "Unknown";
         private ushort weight = 0;
@@ -37,21 +37,20 @@ namespace Lab2Zoo.Models.Animals
         {
             IsSleeping = false;
         }
-
-        public abstract string Voice();
-        public void Add(IComponent component)
+        
+        public override void Add(Component component)
         {
             throw new InvalidOperationException();
         }
-        public void Remove(IComponent component)
+        public override void Remove(Component component)
         {
             throw new InvalidOperationException();
         }
-        public IComponent GetChild(int index)
+        public override Component GetChild(int index)
         {
             throw new InvalidOperationException();
         }
-        public int GetWeight()
+        public override int GetWeight()
         {
             return Weight;
         }
