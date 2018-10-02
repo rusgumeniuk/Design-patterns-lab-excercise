@@ -51,5 +51,9 @@ namespace Lab2Zoo.Models.Animals
         {
             throw new InvalidOperationException();
         }
+        public int GetWeight()
+        {
+            return Weight;
+        }
     }
 }

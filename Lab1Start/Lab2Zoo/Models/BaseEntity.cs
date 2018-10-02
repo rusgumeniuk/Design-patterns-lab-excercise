@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Lab2Zoo.Models
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         public readonly Guid Id;
 

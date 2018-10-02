@@ -10,6 +10,7 @@ namespace Lab2Zoo.Models
         void Add(IComponent component);
         IComponent GetChild(int index);
         string Voice();
+        int GetWeight();
         void Remove(IComponent component);
     }
 }

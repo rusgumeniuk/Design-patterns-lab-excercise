@@ -9,6 +9,12 @@ namespace Lab2Zoo.Models.Cages.BearCages
 {
     public class BearCage : Cage<Bear>
     {
-
+        public override void Add(IComponent component)
+        {
+            if(component is BearCage || component is Bear)
+            {
+                Components.Add(component);
+            }
+        }
     }
 }

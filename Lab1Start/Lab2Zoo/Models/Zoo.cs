@@ -60,7 +60,17 @@ namespace Lab2Zoo.Models
 
         public IComponent GetChild(int index)
         {
+            if (index < 0 || index >= Components.Count) throw new IndexOutOfRangeException("'" + index + "' is wrong index");
             return Components[index];
+        }
+        public int GetWeight()
+        {
+            int weight = 0;
+            foreach (var component in Components)
+            {
+                weight += component.GetWeight();
+            }
+            return weight;
         }
     }
 }
