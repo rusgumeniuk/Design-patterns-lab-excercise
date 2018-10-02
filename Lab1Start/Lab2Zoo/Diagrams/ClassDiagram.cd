@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Lab2Zoo.Models.BaseEntity">
-    <Position X="84.5" Y="39.75" Width="1.5" />
+    <Position X="11.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\BaseEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Animal">
-    <Position X="81.25" Y="40" Width="1.5" />
+    <Position X="8.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>gAIAAAAAAAAAAAAAAAIABAQAACAEAAAgAAAAAAAAEAg=</HashCode>
       <FileName>Models\Animals\Animal.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Giraffe">
-    <Position X="81.25" Y="38" Width="1.5" />
+    <Position X="8.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Animals\Giraffe.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Wolf">
-    <Position X="79.25" Y="40" Width="1.5" />
+    <Position X="6.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Animals\Wolf.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.GreyWolf">
-    <Position X="77" Y="41" Width="1.5" />
+    <Position X="4" Y="10.5" Width="1.5" />
     <InheritanceLine Type="Lab2Zoo.Models.Animals.Wolf" FixedFromPoint="true">
       <Path>
-        <Point X="79.25" Y="40.688" />
-        <Point X="78.875" Y="40.688" />
-        <Point X="78.875" Y="41.499" />
-        <Point X="78.5" Y="41.499" />
+        <Point X="6.25" Y="10.188" />
+        <Point X="5.875" Y="10.188" />
+        <Point X="5.875" Y="10.999" />
+        <Point X="5.5" Y="10.999" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -45,13 +45,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.WhiteWolf">
-    <Position X="77" Y="39.25" Width="1.5" />
+    <Position X="4" Y="8.75" Width="1.5" />
     <InheritanceLine Type="Lab2Zoo.Models.Animals.Wolf" FixedFromPoint="true">
       <Path>
-        <Point X="79.25" Y="40.688" />
-        <Point X="78.875" Y="40.688" />
-        <Point X="78.875" Y="39.749" />
-        <Point X="78.5" Y="39.749" />
+        <Point X="6.25" Y="10.188" />
+        <Point X="5.875" Y="10.188" />
+        <Point X="5.875" Y="9.249" />
+        <Point X="5.5" Y="9.249" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -60,14 +60,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Bear">
-    <Position X="81.25" Y="42" Width="1.5" />
+    <Position X="8.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Animals\Bear.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.Cage&lt;T&gt;">
-    <Position X="87.75" Y="40" Width="1.5" />
+    <Position X="14.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAIAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Cages\Cage.cs</FileName>
@@ -75,85 +75,85 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.BearCages.BearCage">
-    <Position X="87.75" Y="38.5" Width="1.5" />
+    <Position X="14.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\BearCages\BearCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.GiraffeCages.GiraffeCage">
-    <Position X="89.5" Y="40.25" Width="1.5" />
+    <Position X="16.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\GiraffeCages\GiraffeCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.WolfCages.WolfCage&lt;T&gt;">
-    <Position X="87.75" Y="42.5" Width="1.5" />
+    <Position X="14.75" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\WolfCages\WolfCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.WolfCages.WhiteWolfCage">
-    <Position X="86.75" Y="44.25" Width="1.5" />
+    <Position X="13.75" Y="13.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\WolfCages\WhiteWolfCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.WolfCages.GreyWolfCage">
-    <Position X="88.75" Y="44.25" Width="1.5" />
+    <Position X="15.75" Y="13.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\WolfCages\GreyWolfCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.GiraffeCages.GiraffeChildrenCage">
-    <Position X="91.5" Y="39.5" Width="1.5" />
+    <Position X="18.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\GiraffeCages\GiraffeChildrenCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.GiraffeCages.GiraffeAdultCage">
-    <Position X="91.5" Y="41" Width="1.5" />
+    <Position X="18.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\GiraffeCages\GiraffeAdultCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.BearCages.BearMaleCage">
-    <Position X="86.75" Y="37" Width="1.5" />
+    <Position X="13.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\BearCages\BearMaleCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Zoo">
-    <Position X="84.5" Y="36.5" Width="1.5" />
+    <Position X="11.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAIAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAIAAAAAAAAAAIAAAAIABAAAAAAIAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Zoo.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.AnimalFactories.AnimalFactory">
-    <Position X="82.75" Y="49.25" Width="1.5" />
+    <Position X="9.75" Y="18.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Factories\AnimalFactories\AnimalFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.AnimalFactories.BearFactory">
-    <Position X="82.75" Y="47.75" Width="1.5" />
+    <Position X="9.75" Y="17.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <InheritanceLine Type="Lab2Zoo.Models.Factories.AnimalFactories.AnimalFactory" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="83.5" Y="49.25" />
-        <Point X="83.5" Y="48.791" />
+        <Point X="10.5" Y="18.75" />
+        <Point X="10.5" Y="18.291" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -162,7 +162,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.AnimalFactories.GiraffeFactory">
-    <Position X="82.75" Y="50.75" Width="1.5" />
+    <Position X="9.75" Y="20.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -172,7 +172,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.AnimalFactories.WhiteWolfFactory">
-    <Position X="80.75" Y="49.75" Width="1.5" />
+    <Position X="7.75" Y="19.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -182,16 +182,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.AnimalFactories.GreyWolfFactory">
-    <Position X="80.75" Y="48.25" Width="1.5" />
+    <Position X="7.75" Y="17.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <InheritanceLine Type="Lab2Zoo.Models.Factories.AnimalFactories.AnimalFactory" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="82.75" Y="49.513" />
-        <Point X="82.51" Y="49.513" />
-        <Point X="82.51" Y="49.125" />
-        <Point X="82.25" Y="49.125" />
+        <Point X="9.75" Y="19.013" />
+        <Point X="9.51" Y="19.013" />
+        <Point X="9.51" Y="18.625" />
+        <Point X="9.25" Y="18.625" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -200,16 +200,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.BearCageFactory.BearCageFactory">
-    <Position X="90.5" Y="48.25" Width="1.5" />
+    <Position X="17.5" Y="17.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <InheritanceLine Type="Lab2Zoo.Models.Factories.CageFactories.CageFactory&lt;T&gt;" FixedFromPoint="true">
       <Path>
-        <Point X="87.75" Y="49.938" />
-        <Point X="88.125" Y="49.938" />
-        <Point X="88.125" Y="48.77" />
-        <Point X="90.5" Y="48.77" />
+        <Point X="14.75" Y="19.438" />
+        <Point X="15.125" Y="19.438" />
+        <Point X="15.125" Y="18.27" />
+        <Point X="17.5" Y="18.27" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -218,7 +218,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.GiraffeCageFactory.GiraffeCageFactory">
-    <Position X="86.5" Y="46.25" Width="1.5" />
+    <Position X="13.5" Y="15.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -228,7 +228,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.WolfCageFactory.WolfCageFactory">
-    <Position X="87" Y="52.5" Width="1.5" />
+    <Position X="14" Y="22" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -238,7 +238,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.WolfCageFactory.WhiteWolfCageFactory">
-    <Position X="88.5" Y="52.5" Width="1.5" />
+    <Position X="15.5" Y="22" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -248,7 +248,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.WolfCageFactory.GreyWolfCageFactory">
-    <Position X="90" Y="52.5" Width="1.5" />
+    <Position X="17" Y="22" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -258,16 +258,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.BearCageFactory.MaleBearCageFactory">
-    <Position X="90.5" Y="50.75" Width="1.5" />
+    <Position X="17.5" Y="20.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <InheritanceLine Type="Lab2Zoo.Models.Factories.CageFactories.CageFactory&lt;T&gt;" FixedFromPoint="true">
       <Path>
-        <Point X="87.75" Y="49.938" />
-        <Point X="88.125" Y="49.938" />
-        <Point X="88.125" Y="51.27" />
-        <Point X="90.5" Y="51.27" />
+        <Point X="14.75" Y="19.438" />
+        <Point X="15.125" Y="19.438" />
+        <Point X="15.125" Y="20.77" />
+        <Point X="17.5" Y="20.77" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -276,17 +276,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.BearCageFactory.FemaleBearCageFactory">
-    <Position X="90.5" Y="49.5" Width="1.5" />
+    <Position X="17.5" Y="19" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
+    <InheritanceLine Type="Lab2Zoo.Models.Factories.CageFactories.CageFactory&lt;T&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="14.75" Y="19.438" />
+        <Point X="17.5" Y="19.438" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Models\Factories\CageFactories\BearCageFactory\FemaleBearCageFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.GiraffeCageFactory.ChildrenGiraffeCageFactory">
-    <Position X="90" Y="46.25" Width="1.5" />
+    <Position X="17" Y="15.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -296,7 +302,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.GiraffeCageFactory.AdultGiraffeCageFactory">
-    <Position X="88.25" Y="46.25" Width="1.5" />
+    <Position X="15.25" Y="15.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -306,35 +312,35 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Factories.CageFactories.CageFactory&lt;T&gt;">
-    <Position X="86.25" Y="49.25" Width="1.5" />
+    <Position X="13.25" Y="18.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Models\Factories\CageFactories\CageFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab2Zoo.Models.Cages.BearCages.BearFemaleCage">
-    <Position X="88.75" Y="37" Width="1.5" />
+    <Position X="15.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Cages\BearCages\BearFemaleCage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Lab2Zoo.Models.IComponent">
-    <Position X="81.75" Y="36" Width="1.5" />
+    <Position X="11.5" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\IComponent.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Lab2Zoo.Models.Enums.DayMode">
-    <Position X="84.5" Y="34.75" Width="1.5" />
+    <Position X="11.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Enums\DayMode.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Lab2Zoo.Models.Enums.MaleMode">
-    <Position X="81.25" Y="43.5" Width="1.5" />
+    <Position X="8.25" Y="15" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Models\Enums\MaleMode.cs</FileName>
