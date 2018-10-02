@@ -26,7 +26,7 @@ namespace Lab2Zoo.Models.Animals
             get => name;
             set
             {
-                if (!String.IsNullOrWhiteSpace(value))
+                if (String.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("'" + value + "' can not be name");
                 else
                     name = value;
@@ -53,6 +53,11 @@ namespace Lab2Zoo.Models.Animals
         public override int GetWeight()
         {
             return Weight;
+        }
+
+        public override string ToString()
+        {
+            return this.GetType().Name + " '" + Name + "'";
         }
     }
 }

@@ -33,5 +33,10 @@ namespace Lab2Zoo.Models
             else
                 return null;
         }
+
+        public override string ToString()
+        {
+            return GetType().Name + " " + Id;
+        }
     }
 }

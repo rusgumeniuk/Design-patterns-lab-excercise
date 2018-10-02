@@ -9,7 +9,15 @@ namespace Lab2Zoo.Models.Cages
 {
     public class Cage<T> : Container
         where T : Animal
-    {        
-        
+    {
+        public override string Voice()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var component in Components)
+            {
+                stringBuilder.AppendLine(component.Voice());
+            }
+            return stringBuilder.Length > 0 ? stringBuilder.ToString() : "Empty cage " + Id; 
+        }
     }
 }

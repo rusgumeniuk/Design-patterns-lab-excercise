@@ -13,17 +13,7 @@ namespace Lab2Zoo.Models
         {
             Components.Add(component);
             component.SetNext(this);
-        }
-        public override string Voice()
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-            foreach (var component in Components)
-            {
-                stringBuilder.Append(component.Voice());
-            }
-            return stringBuilder.ToString();
-        }
-
+        }       
         public override void Remove(Component component)
         {
             Components.Remove(component);
