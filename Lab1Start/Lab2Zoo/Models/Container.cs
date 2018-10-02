@@ -12,7 +12,7 @@ namespace Lab2Zoo.Models
         public override void Add(Component component)
         {
             Components.Add(component);
-            component.container = this;
+            component.SetNext(this);
         }
         public override string Voice()
         {
@@ -43,5 +43,6 @@ namespace Lab2Zoo.Models
             }
             return weight;
         }
+
     }
 }

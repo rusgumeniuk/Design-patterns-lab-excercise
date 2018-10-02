@@ -14,27 +14,7 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
             byte randomNumber = (byte)(new Random().Next(1, 10));
             bool wolfRandom = new Random().Next(0, 1) == 1;
 
-            AnimalFactory factory = null;
-
-            if (randomNumber > 8)
-            {
-                factory = (AnimalFactory)new GiraffeFactory();
-            }
-            else if (randomNumber < 5)
-            {
-                factory = new BearFactory();
-            }
-            else
-            {
-                if (wolfRandom)
-                {
-                    factory = new GreyWolfFactory();
-                }
-                else
-                {
-                    factory = new WhiteWolfFactory();
-                }
-            }
+            AnimalFactory factory = randomNumber > 8 ? new GiraffeFactory() : (randomNumber < 5 ? new BearFactory() : (wolfRandom ? (AnimalFactory)new WhiteWolfFactory() : new GreyWolfFactory()));
 
             return factory.CreateAnimal();
         }

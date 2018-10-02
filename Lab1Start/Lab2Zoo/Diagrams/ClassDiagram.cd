@@ -3,7 +3,7 @@
   <Class Name="Lab2Zoo.Models.Component">
     <Position X="11.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAICAAAACAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAICAAAACAAAAAAAAAIABAAAAAAgAAAAAAQAAAAAAAg=</HashCode>
       <FileName>Models\Component.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -364,13 +364,6 @@
     <TypeIdentifier>
       <HashCode>AAIAAAAACAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\IComponent.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Lab2Zoo.IHandle">
-    <Position X="13.25" Y="12.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\IHandle.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Lab2Zoo.Models.Enums.DayMode">
