@@ -7,7 +7,7 @@ using Lab2Zoo.Models.Animals;
 
 namespace Lab2Zoo.Models.Cages
 {
-    public class Cage<T> : Container
+    public abstract class Cage<T> : Container
         where T : Animal
     {
         public override string Voice()
