@@ -71,5 +71,14 @@ namespace Lab2Zoo.Models
             }
             return count;
         }
+        public override List<Animal> GetAnimals()
+        {
+            List<Animal> animals = new List<Animal>();
+            foreach (var item in Components)
+            {
+                animals.AddRange(item.GetAnimals());
+            }
+            return animals;
+        }
     }
 }

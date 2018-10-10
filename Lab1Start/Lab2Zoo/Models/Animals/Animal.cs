@@ -59,6 +59,10 @@ namespace Lab2Zoo.Models.Animals
         {
             return 1;
         }
+        public override List<Animal> GetAnimals()
+        {
+            return new List<Animal>() { this };
+        }
 
         public override string ToString()
         {
