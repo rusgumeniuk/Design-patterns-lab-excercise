@@ -59,7 +59,6 @@
     <Compile Include="TestClasses\CagesTestClasses\BearCagesTestClasses\BearCageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\BearCagesTestClasses\BearFemaleCageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\BearCagesTestClasses\BearMaleCageTestClass.cs" />
-    <Compile Include="TestClasses\CagesTestClasses\CageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\GiraffeCagesTestClass\GiraffeAdultCageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\GiraffeCagesTestClass\GiraffeCageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\GiraffeCagesTestClass\GiraffeChildrenCageTestClass.cs" />
