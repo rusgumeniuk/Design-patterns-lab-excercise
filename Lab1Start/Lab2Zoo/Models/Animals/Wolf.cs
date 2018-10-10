@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Lab2Zoo.Models.Animals
 {
-    public class Wolf : Animal
+    public abstract class Wolf : Animal
     {
         public override string Voice()
         {
