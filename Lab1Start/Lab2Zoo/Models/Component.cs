@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Lab2Zoo.Models
 {
-    public abstract class Component : IComponent, IHandle
+    public abstract class Component
     {
         public readonly Guid Id;
 

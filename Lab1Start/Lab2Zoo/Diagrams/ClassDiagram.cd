@@ -6,7 +6,6 @@
       <HashCode>AAICAAAACAAAAAAEAAIABAAAAAAgAAIAAAQAAAAAAAg=</HashCode>
       <FileName>Models\Component.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab2Zoo.Models.Animals.Animal">
     <Position X="9.25" Y="9.5" Width="1.5" />
@@ -359,13 +358,6 @@
       <FileName>Models\Container.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Lab2Zoo.Models.IComponent">
-    <Position X="11.5" Y="12.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAAACAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
-      <FileName>Models\IComponent.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="Lab2Zoo.Models.Enums.DayMode">
     <Position X="13.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
