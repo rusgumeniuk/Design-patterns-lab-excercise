@@ -27,8 +27,7 @@ namespace Lab2Zoo.Models
 
         public override void Add(Component component)
         {
-            Components.Add(component);
-            component.SetNext(this);
+            Components.Add(component);            
         }       
         public override void Remove(Component component)
         {

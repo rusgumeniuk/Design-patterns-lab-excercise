@@ -22,18 +22,6 @@ namespace Lab2Zoo.Models
         public abstract int GetWeight();
         public abstract string Voice();
 
-        public void SetNext(Component component)
-        {
-            this.nextComponent = component;
-        }
-        public virtual object Handle(object component)
-        {
-            if (this.nextComponent != null)
-                return this.nextComponent.Handle(component);
-            else
-                return null;
-        }
-
         public override string ToString()
         {
             return GetType().Name + " " + Id;
