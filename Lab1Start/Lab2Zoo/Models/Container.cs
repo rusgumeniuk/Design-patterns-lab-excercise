@@ -3,11 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Lab2Zoo.Models.Animals;
+
 namespace Lab2Zoo.Models
 {
     public abstract class Container : Component
     {
         public List<Component> Components = new List<Component>();
+
+        public float GetAverageWeight()
+        {
+            return 0;
+        //    int count = 0;
+        //    foreach (var component in Components)
+        //    {
+        //        if(component is Animal)
+        //        {
+        //            ++count;
+        //        }
+        //    }            
+        //    return count == 0 ? 0 : GetWeight() / count;
+        }
 
         public override void Add(Component component)
         {

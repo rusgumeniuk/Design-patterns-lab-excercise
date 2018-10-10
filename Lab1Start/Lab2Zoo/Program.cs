@@ -22,13 +22,19 @@ namespace Lab2Zoo
     {
         static void Main(string[] args)
         {
+            Zoo zoo = new Zoo();
+
             Bear firstBear = new BearFactory().CreateAnimal() as Bear;
             Animal randomAnimal = AnimalFactory.CreateRandomAnimal();
 
             firstBear.Name = "First bear";
             randomAnimal.Name = "Random animal";
 
+            firstBear.Weight = 15;
+            randomAnimal.Weight = 33;
+
             BearCage bearCage = (new BearCageFactory().CreateCage() as BearCage);
+            zoo.Add(bearCage);
             bearCage.Add(firstBear);
             bearCage.Add(randomAnimal);
 
