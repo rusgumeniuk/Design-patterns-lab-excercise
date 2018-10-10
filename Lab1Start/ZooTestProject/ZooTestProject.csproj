@@ -55,7 +55,6 @@
     <Compile Include="TestClasses\AnimalTestClasses\GiraffeTestClass.cs" />
     <Compile Include="TestClasses\AnimalTestClasses\GreyWolfTestClass.cs" />
     <Compile Include="TestClasses\AnimalTestClasses\WhiteWolfTestClass.cs" />
-    <Compile Include="TestClasses\AnimalTestClasses\WolfTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\BearCagesTestClasses\BearCageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\BearCagesTestClasses\BearFemaleCageTestClass.cs" />
     <Compile Include="TestClasses\CagesTestClasses\BearCagesTestClasses\BearMaleCageTestClass.cs" />
