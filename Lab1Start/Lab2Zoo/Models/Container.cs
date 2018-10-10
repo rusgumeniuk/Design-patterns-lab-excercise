@@ -9,22 +9,8 @@ namespace Lab2Zoo.Models
 {
     public abstract class Container : Component
     {
-        public List<Component> Components = new List<Component>();
-
-        public float GetAverageWeight()
-        {
-            return 0;
-        //    int count = 0;
-        //    foreach (var component in Components)
-        //    {
-        //        if(component is Animal)
-        //        {
-        //            ++count;
-        //        }
-        //    }            
-        //    return count == 0 ? 0 : GetWeight() / count;
-        }
-
+        public List<Component> Components = new List<Component>();       
+      
         public override void Add(Component component)
         {
             Components.Add(component);            
@@ -39,6 +25,18 @@ namespace Lab2Zoo.Models
             if (index < 0 || index >= Components.Count) throw new IndexOutOfRangeException("'" + index + "' is wrong index");
             return Components[index];
         }
+
+        public float GetAverageWeight()
+        {
+            try
+            {
+                return GetWeight() / GetAmountOfAnimals();
+            }
+            catch (DivideByZeroException)
+            {
+                return -1;
+            }
+        }
         public override int GetWeight()
         {
             int weight = 0;
@@ -48,6 +46,14 @@ namespace Lab2Zoo.Models
             }
             return weight;
         }
-
+        public override int GetAmountOfAnimals()
+        {
+            int count = 0;
+            foreach (var item in Components)
+            {
+                count += item.GetAmountOfAnimals();
+            }
+            return count;
+        }
     }
 }

@@ -55,6 +55,10 @@ namespace Lab2Zoo.Models.Animals
         {
             return Weight;
         }
+        public override int GetAmountOfAnimals()
+        {
+            return 1;
+        }
 
         public override string ToString()
         {

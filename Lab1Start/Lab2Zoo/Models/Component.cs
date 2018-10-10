@@ -20,6 +20,7 @@ namespace Lab2Zoo.Models
         public abstract void Remove(Component component);
         public abstract Component GetChild(int index);
         public abstract int GetWeight();
+        public abstract int GetAmountOfAnimals();
         public abstract string Voice();
 
         public override string ToString()

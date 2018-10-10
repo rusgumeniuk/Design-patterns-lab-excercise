@@ -44,6 +44,8 @@ namespace Lab2Zoo
             Console.WriteLine(bearCage + ":");
             Console.WriteLine(bearCage.Voice());
 
+            Console.WriteLine(zoo.GetAmountOfAnimals());
+
             Console.ReadKey();
         }
     }
