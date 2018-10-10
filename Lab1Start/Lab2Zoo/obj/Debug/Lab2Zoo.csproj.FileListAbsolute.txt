@@ -1,8 +1,0 @@
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\bin\Debug\Lab2Zoo.exe
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\bin\Debug\Lab2Zoo.pdb
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Debug\Lab2Zoo.csprojAssemblyReference.cache
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Debug\Lab2Zoo.Properties.Resources.resources
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Debug\Lab2Zoo.csproj.GenerateResource.cache
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Debug\Lab2Zoo.csproj.CoreCompileInputs.cache
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Debug\Lab2Zoo.exe
-C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab2Zoo\obj\Debug\Lab2Zoo.pdb

@@ -9,8 +9,6 @@ namespace Lab2Zoo.Models
     {
         public readonly Guid Id;
 
-        private Component nextComponent;
-
         public Component()
         {
             Id = Guid.NewGuid();
