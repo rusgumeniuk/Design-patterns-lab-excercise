@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ZooTestProject
+namespace ZooTestProject.TestClasses
 {
     [TestClass]
-    public class UnitTest1
+    public class ZooTest
     {
         [TestMethod]
         public void TestMethod1()
