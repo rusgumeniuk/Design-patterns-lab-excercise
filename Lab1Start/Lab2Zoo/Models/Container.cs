@@ -15,6 +15,22 @@ namespace Lab2Zoo.Models
         {
             Components.Add(component);            
         }       
+        public Container AddAnimal(Animal animal)
+        {
+            foreach (var component in Components)
+            {
+                if (component is Container && IsContainerCanContainsAnimal(component as Container, animal))
+                {
+                    return component as Container;
+                }
+            }
+            return null;
+        }
+        private bool IsContainerCanContainsAnimal(Container container, Animal animal)
+        {
+            container.Add(animal);
+            return container.Components.Contains(animal);
+        }
         public override void Remove(Component component)
         {
             Components.Remove(component);

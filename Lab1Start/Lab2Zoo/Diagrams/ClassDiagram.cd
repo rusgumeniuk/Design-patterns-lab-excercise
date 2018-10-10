@@ -3,7 +3,7 @@
   <Class Name="Lab2Zoo.Models.Component">
     <Position X="11.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAICAAAACAAAAAAEAAIABAAEAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <HashCode>AAICAAAACAAAAAAEAAIABAAEAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\Component.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -69,8 +69,8 @@
     <Position X="16.75" Y="10" Width="1.5" />
     <InheritanceLine Type="Lab2Zoo.Models.Container" FixedFromPoint="true">
       <Path>
-        <Point X="14.75" Y="10.492" />
-        <Point X="16.75" Y="10.492" />
+        <Point X="14.75" Y="10.673" />
+        <Point X="16.75" Y="10.673" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -354,7 +354,7 @@
   <Class Name="Lab2Zoo.Models.Container">
     <Position X="13.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAACAAAAIAAAAIABAAEAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAIAAAAACAAAAIAAAAIABBAEAAAAAAAAAAAEAAAAEAA=</HashCode>
       <FileName>Models\Container.cs</FileName>
     </TypeIdentifier>
   </Class>
