@@ -21,6 +21,13 @@ namespace Lab2Zoo.Models
         {
             CurrentDayMode = mode;
         }
+        public void ChangeDayMode()
+        {
+            if (CurrentDayMode == DayMode.Day)
+                CurrentDayMode = DayMode.Night;
+            else
+                CurrentDayMode = DayMode.Day;
+        }
         
         public override string Voice()
         {
