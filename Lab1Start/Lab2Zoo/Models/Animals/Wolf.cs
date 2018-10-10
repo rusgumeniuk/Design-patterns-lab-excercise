@@ -9,7 +9,7 @@ namespace Lab2Zoo.Models.Animals
     {
         public override string Voice()
         {
-            return "ARH - WOOOOOOOO";
+            return Id + ": ARH - WOOOOOOOO";
         }
     }
 }

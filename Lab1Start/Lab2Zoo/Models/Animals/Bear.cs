@@ -12,14 +12,11 @@ namespace Lab2Zoo.Models.Animals
         public MaleMode Male = MaleMode.Female;
         
         internal Bear() : base() { }
-        internal Bear(MaleMode male) : this()
-        {
-            Male = male;
-        }
+        internal Bear(MaleMode male) : this() { Male = male; }
 
         public override string Voice()
         {
-            return "Grrrrr";
+            return Id +  ": Grrrrr";
         }
     }
 }

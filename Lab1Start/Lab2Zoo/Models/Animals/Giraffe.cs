@@ -25,7 +25,7 @@ namespace Lab2Zoo.Models.Animals
 
         public override string Voice()
         {
-            return "Huuum";
+            return Id + ": Huuum";
         }
     }
 }
