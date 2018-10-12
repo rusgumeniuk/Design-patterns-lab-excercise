@@ -9,9 +9,9 @@ namespace ZooXUnitTestProject.TestClasses.AnimalTestClasses
     public class AnimalTestClass
     {
         [Fact]
-        public void TestMethod1()
+        public void Name_WhenSetNull_ReturnsArgumentException()
         {
-
+            Assert.Throws<ArgumentException>(() => AnimalFactory.CreateRandomAnimal().Name = null);
         }
     }
 }
