@@ -33,6 +33,8 @@ namespace Lab2Zoo.Models.Animals
             }
         }  
 
+        internal Animal() : base() { }
+
         public string WakeUp()
         {
             IsSleeping = false;

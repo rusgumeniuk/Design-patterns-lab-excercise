@@ -9,6 +9,7 @@ namespace Lab2Zoo.Models.Cages.BearCages
 {
     public class BearMaleCage : BearCage
     {
+        internal BearMaleCage() : base() { }
         public override void Add(Component component)
         {
          if(component is BearMaleCage || (component is Bear && (component as Bear).Male == Enums.MaleMode.Male))

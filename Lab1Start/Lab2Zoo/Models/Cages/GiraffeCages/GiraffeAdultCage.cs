@@ -9,6 +9,7 @@ namespace Lab2Zoo.Models.Cages.GiraffeCages
 {
     public class GiraffeAdultCage : GiraffeCage
     {
+        internal GiraffeAdultCage() : base() { }
         public override void Add(Component component)
         {
             if(component is GiraffeAdultCage || (component is Giraffe && (component as Giraffe).Age > 14))

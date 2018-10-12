@@ -11,7 +11,7 @@ namespace Lab2Zoo.Models
     {
         public readonly Guid Id;
 
-        public Component()
+        internal Component()
         {
             Id = Guid.NewGuid();
         }

@@ -9,6 +9,7 @@ namespace Lab2Zoo.Models.Cages.WolfCages
 {
     public class WhiteWolfCage : WolfCage<WhiteWolf>
     {
+        internal WhiteWolfCage() : base() { }
         public override void Add(Component component)
         {
             if(component is WhiteWolfCage || component is WhiteWolf)

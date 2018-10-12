@@ -7,6 +7,8 @@ namespace Lab2Zoo.Models.Animals
 {
     public class WhiteWolf : Wolf
     {
+        internal WhiteWolf() : base() { }
+
         public override string Voice()
         {
             return base.Voice() + "auuu";
