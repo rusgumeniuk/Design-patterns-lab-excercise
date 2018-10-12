@@ -26,7 +26,7 @@ namespace Lab2Zoo.Models
             }
             return null;
         }
-        private bool IsContainerCanContainsAnimal(Container container, Animal animal)
+        public static bool IsContainerCanContainsAnimal(Container container, Animal animal)
         {
             container.Add(animal);
             return container.Components.Contains(animal);
