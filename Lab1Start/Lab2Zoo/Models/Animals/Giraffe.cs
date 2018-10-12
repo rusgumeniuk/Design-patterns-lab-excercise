@@ -7,13 +7,13 @@ namespace Lab2Zoo.Models.Animals
 {
     public class Giraffe : Animal
     {
-        private byte age = 0;
+        private byte age = 1;
         public byte Age
         {
             get => age;
             set
             {
-                if (value < 0)
+                if (value < 1)
                     throw new ArgumentException("'" + value + "' can not be age");
                 else
                     age = value;
