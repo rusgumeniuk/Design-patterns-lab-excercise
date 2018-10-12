@@ -16,13 +16,12 @@ namespace ZooXUnitTestProject.TestClasses.CagesTestClasses.BearCagesTestClasses
         public BearFemaleCageTestClass()
         {
             cage = new FemaleBearCageFactory().CreateCage() as BearFemaleCage;
-            bear = new BearFactory().CreateAnimal() as Bear;
+            bear = new BearFactory().CreateAnimal(Lab2Zoo.Models.Enums.MaleMode.Female) as Bear;            
         }
 
         [Fact]
         public void Add_WhenAddFemaleBear_ReturnsTrue()
-        {
-            bear.Male = Lab2Zoo.Models.Enums.MaleMode.Female;
+        {            
             cage.Add(bear);
 
             Assert.NotEmpty(cage.Components);
@@ -31,13 +30,26 @@ namespace ZooXUnitTestProject.TestClasses.CagesTestClasses.BearCagesTestClasses
         }
 
         [Fact]
-        public void Add_WhenAddMaleBear_ReturnsTrue()
+        public void Add_WhenAddMaleBear_ReturnsTypeAccesException()
         {
             bear.Male = Lab2Zoo.Models.Enums.MaleMode.Male;
-            cage.Add(bear);
+
+            Assert.Throws<TypeAccessException>(() => cage.Add(bear));
 
             Assert.Empty(cage.Components);
             Assert.Empty(cage.GetAnimals());
+        }
+
+        [Fact]
+        public void Add_WhenAddFemaleBearCage_ReturnsTrue()
+        {
+            BearFemaleCage innerCage = new FemaleBearCageFactory().CreateCage() as BearFemaleCage;
+            cage.Add(innerCage);
+            
+            innerCage.Add(bear);
+
+            Assert.NotEmpty(cage.Components);
+            Assert.Equal(bear, cage.GetAnimals()[0]);            
         }
     }
 }
