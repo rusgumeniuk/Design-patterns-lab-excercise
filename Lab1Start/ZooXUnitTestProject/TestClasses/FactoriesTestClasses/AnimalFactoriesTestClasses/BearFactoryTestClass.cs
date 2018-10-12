@@ -9,9 +9,9 @@ namespace ZooXUnitTestProject.TestClasses.FactoriesTestClasses.AnimalFactoriesTe
     public class BearFactoryTestClass
     {
         [Fact]
-        public void TestMethod1()
+        public void CreateAnimal_WhenCreatAnimal_ReturnsTrue()
         {
-
+            Assert.IsType<Bear>(new WhiteWolfFactory().CreateAnimal());
         }
     }
 }

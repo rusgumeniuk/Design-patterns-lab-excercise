@@ -9,9 +9,9 @@ namespace ZooXUnitTestProject.TestClasses.FactoriesTestClasses.AnimalFactoriesTe
     public class GreyWolfFactoryTestClass
     {
         [Fact]
-        public void TestMethod1()
+        public void CreateAnimal_WhenCreatAnimal_ReturnsTrue()
         {
-
+            Assert.IsType<GreyWolf>(new WhiteWolfFactory().CreateAnimal());
         }
     }
 }
