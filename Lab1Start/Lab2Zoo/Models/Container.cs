@@ -96,5 +96,9 @@ namespace Lab2Zoo.Models
         {
             throw new TypeAccessException("Object with type '" + component.GetType().Name + "' can not be placed to " + GetType().Name);
         }
+        protected void ThrowWrongComponentException(Component component, string message)
+        {
+            throw new TypeAccessException("Object with type '" + component.GetType().Name + "' can not be placed to " + GetType().Name + "\n" + message);
+        }
     }
 }
