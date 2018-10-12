@@ -12,3 +12,4 @@ C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patte
 C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Debug\Lab1Start.csproj.CoreCompileInputs.cache
 C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Debug\Lab1Start.exe
 C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Debug\Lab1Start.pdb
+C:\Users\Omman\Desktop\Education\student\proga\OOP 4s&5s\5s\myLabs\LabsOOP_Patterns\Lab1Start\Lab1Start\obj\Debug\Lab1Start.csprojAssemblyReference.cache
