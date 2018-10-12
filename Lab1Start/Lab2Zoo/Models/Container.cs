@@ -91,5 +91,10 @@ namespace Lab2Zoo.Models
             }
             return result;
         }
+
+        protected void ThrowWrongComponentException(Component component)
+        {
+            throw new TypeAccessException("Object with type '" + component.GetType().Name + "' can not be placed to " + GetType().Name);
+        }
     }
 }
