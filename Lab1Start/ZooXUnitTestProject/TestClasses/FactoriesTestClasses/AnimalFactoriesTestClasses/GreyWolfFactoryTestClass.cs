@@ -11,7 +11,7 @@ namespace ZooXUnitTestProject.TestClasses.FactoriesTestClasses.AnimalFactoriesTe
         [Fact]
         public void CreateAnimal_WhenCreatAnimal_ReturnsTrue()
         {
-            Assert.IsType<GreyWolf>(new WhiteWolfFactory().CreateAnimal());
+            Assert.IsType<GreyWolf>(new GreyWolfFactory().CreateAnimal());
         }
     }
 }
