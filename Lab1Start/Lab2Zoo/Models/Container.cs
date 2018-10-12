@@ -80,7 +80,7 @@ namespace Lab2Zoo.Models
             }
             return animals;
         }
-        public string GetStringAnimals()
+        public string GetAnimalsString()
         {
             List<Animal> animals = GetAnimals();
             if (animals.Count < 1) return "No one";
