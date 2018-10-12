@@ -18,7 +18,7 @@ namespace ZooXUnitTestProject.TestClasses.FactoriesTestClasses.CageFactoriesTest
         [Fact]
         public void CreateCage_WhenCreate_IsInstanceIsDerivedCage_ReturnsTrue()
         {
-            Assert.IsAssignableFrom<GiraffeCage>(new AdultGiraffeCageFactory().CreateCage());
+            Assert.IsType<GiraffeAdultCage>(new AdultGiraffeCageFactory().CreateCage());
         }
     }
 }
