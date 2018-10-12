@@ -9,9 +9,15 @@ namespace ZooXUnitTestProject.TestClasses.FactoriesTestClasses.AnimalFactoriesTe
     public class AnimalFactoryTestClass
     {
         [Fact]
-        public void CreateRandomAnimal_ClassTest_ReturnsTrue()
-        {            
-            Assert.Throws<ArgumentException>(() => AnimalFactory.CreateRandomAnimal().Name = null);
+        public void CreateRandomAnimal_IsCreatedObjectIsDerivedOfAnimal_ReturnsTrue()
+        {
+            Assert.IsAssignableFrom<Animal>(AnimalFactory.CreateRandomAnimal());
+        }
+
+        [Fact]
+        public void CreateRandomAnimal_IsCreatedObjectNotNull_ReturnsTrue()
+        {
+            Assert.NotNull(AnimalFactory.CreateRandomAnimal());
         }
     }
 }
