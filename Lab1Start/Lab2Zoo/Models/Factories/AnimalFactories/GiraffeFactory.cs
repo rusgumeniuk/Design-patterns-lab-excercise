@@ -11,7 +11,7 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
     {
         public override Animal CreateAnimal()
         {
-            return new Giraffe();
+            return new Giraffe((byte)(new Random().Next(1, 30)));
         }
         public Animal CreateAnimal(byte age)
         {

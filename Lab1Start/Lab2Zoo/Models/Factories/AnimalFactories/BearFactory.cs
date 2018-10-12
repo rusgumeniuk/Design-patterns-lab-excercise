@@ -12,7 +12,7 @@ namespace Lab2Zoo.Models.Factories.AnimalFactories
     {
         public override Animal CreateAnimal()
         {
-            return new Bear();
+            return new Bear((new Random().Next(0, 1) % 2 == 0 ? MaleMode.Female : MaleMode.Male));
         }
         public Animal CreateAnimal(MaleMode male)
         {
