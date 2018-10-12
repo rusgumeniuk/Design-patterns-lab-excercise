@@ -11,12 +11,15 @@ namespace Lab2Zoo.Models.Cages.WolfCages
         where T : Wolf
     {
         internal WolfCage() : base() { }
+
         public override void Add(Component component)
         {
-            if(component is WolfCage<T> || (component is Wolf))
+            if (component is WolfCage<T> || (component is Wolf)) 
             {
                 Components.Add(component);
             }
+            else
+                ThrowWrongComponentException(component);
         }
     }
 }

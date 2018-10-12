@@ -10,12 +10,15 @@ namespace Lab2Zoo.Models.Cages.GiraffeCages
     public class GiraffeCage : Cage<Giraffe>
     {
         internal GiraffeCage() : base() { }
+
         public override void Add(Component component)
         {
-            if(component is GiraffeCage || (component is Giraffe))
+            if (component is GiraffeCage || (component is Giraffe)) 
             {
                 Components.Add(component);
             }
+            else
+                ThrowWrongComponentException(component);
         }
     }
 }
