@@ -20,5 +20,10 @@ namespace Lab2Zoo.Models.Cages.BearCages
             else
                 ThrowWrongComponentException(component);
         }
+
+        public override bool IsContainerCanContainsAnimal(Animal animal)
+        {
+            return animal is Bear;
+        }
     }
 }
