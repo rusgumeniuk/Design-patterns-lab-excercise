@@ -12,25 +12,44 @@ namespace Lab2Zoo.Models
         public List<Component> Components = new List<Component>();       
       
         public override void Add(Component component)
-        {
+        {            
             Components.Add(component);            
         }       
-        public Container AddAnimal(Animal animal)
+
+        public Container GetContainerForAnimal(Animal animal)
         {
-            foreach (var component in Components)
+            Container childContainer = GetChildContainerForAnimal(animal);
+            if (childContainer != null)
+                return childContainer.GetContainerForAnimal(animal);
+            else if (IsContainerCanContainsAnimal(animal))
+                return this;
+            else
+                return null;
+        }
+
+        public static bool IsContainerCanContainsAnimal(Container container, Animal animal)
+        {
+            return container.IsContainerCanContainsAnimal(animal);            
+        }
+        public virtual bool IsContainerCanContainsAnimal(Animal animal)
+        {
+            return animal is Animal;
+        }
+
+        public virtual bool IsChildCanContainsAnimal(Animal animal)
+        {
+            return GetChildContainerForAnimal(animal) != null;
+        }
+        protected virtual Container GetChildContainerForAnimal(Animal animal)
+        {
+            foreach (var child in Components)
             {
-                if (component is Container && IsContainerCanContainsAnimal(component as Container, animal))
-                {
-                    return component as Container;
-                }
+                if (child is Container && (child as Container).IsContainerCanContainsAnimal(animal))
+                    return child as Container;
             }
             return null;
         }
-        public static bool IsContainerCanContainsAnimal(Container container, Animal animal)
-        {
-            container.Add(animal);
-            return container.Components.Contains(animal);
-        }
+       
         public override void Remove(Component component)
         {
             Components.Remove(component);
