@@ -17,6 +17,8 @@ namespace Lab2Zoo.Models.Cages.BearCages
             {
                 Components.Add(component);
             }
+            else
+                ThrowWrongComponentException(component);
         }
         public override bool IsContainerCanContainsAnimal(Animal animal)
         {
