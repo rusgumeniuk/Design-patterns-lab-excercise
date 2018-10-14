@@ -36,7 +36,7 @@ namespace ZooXUnitTestProject.TestClasses.CagesTestClasses.BearCagesTestClasses
 
             bear.Male = Lab2Zoo.Models.Enums.MaleMode.Female;
 
-            Lab2Zoo.Models.Container container = mainBearCage.AddAnimal(bear);
+            Lab2Zoo.Models.Container container = mainBearCage.GetContainerForAnimal(bear);
 
             Assert.Equal(maleCage, container);
         }
