@@ -24,7 +24,7 @@ namespace Lab2Zoo.Models
             Container childContainer = GetChildContainerForAnimal(animal);
             if (childContainer != null)
                 return childContainer.GetContainerForAnimal(animal);
-            else if (IsContainerCanContainsAnimal(animal))
+            else if (IsContainerCanContainsAnimal(animal) && !(this is Zoo))
                 return this;
             else
                 return null;
