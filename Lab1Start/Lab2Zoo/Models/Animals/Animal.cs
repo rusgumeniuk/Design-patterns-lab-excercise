@@ -38,7 +38,7 @@ namespace Lab2Zoo.Models.Animals
         public string WakeUp()
         {
             IsSleeping = false;
-            return this + " is woke up!";
+            return this + " is woke up!" ;
         }
         
         public override void Add(Component component)
