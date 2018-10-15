@@ -8,10 +8,19 @@ namespace ZooXUnitTestProject.TestClasses.AnimalTestClasses
 {
     public class GreyWolfTestClass
     {
-        [Fact]
-        public void TestMethod1()
-        {
+        readonly GreyWolfFactory greyWolfFactory;
+        readonly GreyWolf greyWolf;
 
+        public GreyWolfTestClass()
+        {
+            greyWolfFactory = new GreyWolfFactory();
+            greyWolf = greyWolfFactory.CreateAnimal() as GreyWolf;
+        }
+
+        [Fact]
+        public void IsWolf_ReturnsTrue()
+        {
+            Assert.IsAssignableFrom<Wolf>(greyWolf);
         }
     }
 }
