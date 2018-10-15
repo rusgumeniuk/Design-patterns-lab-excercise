@@ -36,13 +36,7 @@ namespace Lab2Zoo.Models
                 return IsContainerCanContainsContainer(component as Container);
             return false;
         }
-
         public abstract bool IsContainerCanContainsContainer(Container innerContainer);
-
-        public static bool IsContainerCanContainsAnimal(Container container, Animal animal)
-        {
-            return container.IsContainerCanContainsAnimal(animal);            
-        }
         public virtual bool IsContainerCanContainsAnimal(Animal animal)
         {
             return animal is Animal;
@@ -60,18 +54,7 @@ namespace Lab2Zoo.Models
                     return child as Container;
             }
             return null;
-        }
-       
-        public override void Remove(Component component)
-        {
-            Components.Remove(component);
-        }
-
-        public override Component GetChild(int index)
-        {
-            if (index < 0 || index >= Components.Count) throw new IndexOutOfRangeException("'" + index + "' is wrong index");
-            return Components[index];
-        }
+        }              
 
         public float GetAverageWeight()
         {
@@ -93,6 +76,7 @@ namespace Lab2Zoo.Models
             }
             return weight;
         }
+
         public override int GetAmountOfAnimals()
         {
             int count = 0;
@@ -102,6 +86,7 @@ namespace Lab2Zoo.Models
             }
             return count;
         }
+
         public override List<Animal> GetAnimals()
         {
             List<Animal> animals = new List<Animal>();
@@ -130,6 +115,17 @@ namespace Lab2Zoo.Models
         protected void ThrowWrongComponentException(Component component, string message)
         {
             throw new TypeAccessException("Object with type '" + component.GetType().Name + "' can not be placed to " + GetType().Name + "\n" + message);
+        }
+
+        public override void Remove(Component component)
+        {
+            Components.Remove(component);
+        }
+
+        public override Component GetChild(int index)
+        {
+            if (index < 0 || index >= Components.Count) throw new IndexOutOfRangeException("'" + index + "' is wrong index");
+            return Components[index];
         }
     }
 }
