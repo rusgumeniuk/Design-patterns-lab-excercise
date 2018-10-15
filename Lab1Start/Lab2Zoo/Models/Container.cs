@@ -30,6 +30,7 @@ namespace Lab2Zoo.Models
                 return null;
         }
 
+
         public virtual bool IsContainerCanContainsComponent(Component component)
         {
             if (IsContainerAlreadyContainsComponent(component))
@@ -40,17 +41,24 @@ namespace Lab2Zoo.Models
                 return !IsContainerIsParentContainer(component as Container) && IsContainerCanContainsContainer(component as Container);
             return false;
         }
-        public abstract bool IsContainerCanContainsContainer(Container innerContainer);
-        public virtual bool IsContainerCanContainsAnimal(Animal animal)
+        public bool IsContainerAlreadyContainsComponent(Component component)
         {
-            return animal is Animal;
+            if (Components.Contains(component)) return true;
+            foreach (var item in Components)
+            {
+                if ((item is Container) && (item as Container).IsContainerAlreadyContainsComponent(component))
+                    return true;
+            }
+            return false;
         }
-        public virtual bool IsContainerIsParentContainer(Container container)
+
+        public abstract bool IsContainerCanContainsContainer(Container innerContainer);
+        public bool IsContainerIsParentContainer(Container container)
         {
             if (container.Components.Contains(this)) return true;
             foreach (var component in container.Components)
             {
-                if(component is Container)
+                if (component is Container)
                 {
                     if ((component as Container).IsContainerIsParentContainer(this))
                         return true;
@@ -58,16 +66,12 @@ namespace Lab2Zoo.Models
             }
             return false;
         }
-        public virtual bool IsContainerAlreadyContainsComponent(Component component)
+
+        public virtual bool IsContainerCanContainsAnimal(Animal animal)
         {
-            if (Components.Contains(component)) return true;
-            foreach (var item in Components)
-            {
-                if((item is Container) && (item as Container).IsContainerAlreadyContainsComponent(component))
-                    return true;
-            }
-            return false;
-        }
+            return animal is Animal;
+        }        
+        
 
         public virtual bool IsChildCanContainsAnimal(Animal animal)
         {
@@ -77,7 +81,7 @@ namespace Lab2Zoo.Models
         {
             foreach (var child in Components)
             {
-                if (child is Container && (child as Container).IsContainerCanContainsAnimal(animal))
+                if (child is Container && (child as Container).IsContainerCanContainsComponent(animal))
                     return child as Container;
             }
             return null;
