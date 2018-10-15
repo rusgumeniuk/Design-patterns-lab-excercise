@@ -19,14 +19,27 @@ namespace Lab2Zoo.Models
 
         public void ChangeDayMode(DayMode mode)
         {
-            CurrentDayMode = mode;
+            if(CurrentDayMode != mode)
+            {
+                CurrentDayMode = mode;
+                if (mode == DayMode.Day)
+                    WakeZooUp();
+                else
+                    LetSleepSomeAnimal();
+            }          
         }
         public void ChangeDayMode()
         {
             if (CurrentDayMode == DayMode.Day)
+            {
                 CurrentDayMode = DayMode.Night;
+                LetSleepSomeAnimal();
+            }                          
             else
+            {
                 CurrentDayMode = DayMode.Day;
+                WakeZooUp();
+            }
         }
 
         private void LetSleepSomeAnimal()
