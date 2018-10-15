@@ -127,6 +127,65 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
         }
         #endregion     
 
+        #region GetAmountOfAnimals
+        [Fact]
+        public void GetAmountOfAnimals_WhenEmptyZoo_ReturnsTrue()
+        {
+            Assert.Equal(0, zoo.GetAmountOfAnimals());
+        }
+
+        [Fact]
+        public void GetAmountOfAnimals_When1Animal_ReturnsTrue()
+        {
+            bearMaleCage.Add(maleBear);
+            Assert.Equal(1, zoo.GetAmountOfAnimals());
+        }
+
+        [Fact]
+        public void GetAmountOfAnimals_When2Animals_ReturnsTrue()
+        {
+            bearFemaleCage.Add(femaleBear);
+            bearMaleCage.Add(maleBear);
+
+            Assert.Equal(2, zoo.GetAmountOfAnimals());
+            Assert.Equal(1, mainBearCage.GetAmountOfAnimals());
+            Assert.Equal(1, bearMaleCage.GetAmountOfAnimals());
+
+        }
+        #endregion
+
+        #region GetWeight
+        [Fact]
+        public void GetWeight_WhenEmptyZoo_ReturnsTrue()
+        {
+            Assert.Equal(0, zoo.GetWeight());
+        }
+
+        [Fact]
+        public void GetWeight_When1Animal_ReturnsTrue()
+        {
+            bearMaleCage.Add(maleBear);
+            maleBear.Weight = 20;
+
+            Assert.Equal(20, zoo.GetWeight());
+        }
+
+        [Fact]
+        public void GetWeight_When2Animals_ReturnsTrue()
+        {
+            bearFemaleCage.Add(femaleBear);
+            bearMaleCage.Add(maleBear);
+
+            femaleBear.Weight = 100;
+            maleBear.Weight = 160;
+
+            Assert.Equal(260, zoo.GetWeight());
+            Assert.Equal(100, mainBearCage.GetWeight());
+            Assert.Equal(160, bearMaleCage.GetWeight());
+
+        }
+        #endregion
+
         #region GetAverageWeight
         [Fact]
         public void GetAverageWeight_WhenEmptyZoo_ReturnMinus1()
@@ -153,5 +212,31 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
             
         }
         #endregion
+
+        #region GetAnimals
+        [Fact]
+        public void GetAnimals_WhenEmptyZoo_ReturnsTrue()
+        {
+            Assert.Empty(zoo.GetAnimals());
+        }
+
+        [Fact]
+        public void GetAnimals_When1Animal_ReturnsTrue()
+        {
+            bearMaleCage.Add(maleBear);
+
+            Assert.Equal(maleBear, zoo.GetAnimals()[0]);
+        }
+
+        [Fact]
+        public void GetAnimals_When2Animals_ReturnsTrue()
+        {
+            bearFemaleCage.Add(femaleBear);
+            bearMaleCage.Add(maleBear);
+
+            Assert.Equal(2, zoo.GetAnimals().Count);
+            Assert.Contains(maleBear, zoo.GetAnimals());
+        }
+        #endregion        
     }
 }
