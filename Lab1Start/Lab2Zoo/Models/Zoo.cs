@@ -72,21 +72,11 @@ namespace Lab2Zoo.Models
         {
             StringBuilder stringBuilder = new StringBuilder();
 
-            if(CurrentDayMode == DayMode.Day)
+            foreach (var item in Components)
             {
-                foreach (var component in Components)
-                {
-                    stringBuilder.Append(component.Voice());
-                }                
-            }
-            else
-            {
-                foreach (var item in Components)
-                {
-                    if (item is Animal && (item as Animal).IsSleeping)
-                        stringBuilder.Append((item as Animal).WakeUp());
-                    stringBuilder.AppendLine(item.Voice());
-                }
+                if (item is Animal && (item as Animal).IsSleeping)
+                    stringBuilder.Append((item as Animal).WakeUp());
+                stringBuilder.AppendLine(item.Voice());
             }
 
             return stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one in zoo";

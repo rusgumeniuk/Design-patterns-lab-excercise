@@ -18,9 +18,11 @@ namespace Lab2Zoo.Models.Cages
         public override string Voice()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            foreach (var component in Components)
+            foreach (var item in Components)
             {
-                stringBuilder.AppendLine(component.Voice());
+                if (item is Animal && (item as Animal).IsSleeping)
+                    stringBuilder.Append((item as Animal).WakeUp());
+                stringBuilder.AppendLine(item.Voice());
             }
             return stringBuilder.Length > 0 ? stringBuilder.ToString() : "Empty cage " + Id; 
         }
