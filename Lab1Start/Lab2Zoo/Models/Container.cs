@@ -32,6 +32,7 @@ namespace Lab2Zoo.Models
 
         public virtual bool IsContainerCanContainsComponent(Component component)
         {
+            if (Components.Contains(component)) throw new ArgumentException("Component already in collection");
             if (component is Animal)
                 return IsContainerCanContainsAnimal(component as Animal);
             if (component is Container)
