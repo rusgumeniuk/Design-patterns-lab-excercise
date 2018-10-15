@@ -87,6 +87,14 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
         }
 
         [Fact]
+        public void Voice_WhenEmptyZoo_ReturnsNoOne()
+        {
+            zoo.Remove(bearCage);
+            zoo.Remove(giraffeCage);
+            Assert.Equal("No one in zoo", zoo.Voice());
+        }
+
+        [Fact]
         public void IsContainerCanContainsContainer_WhenAddZoo_ReturnsFalse()
         {
             Assert.False(zoo.IsContainerCanContainsContainer(new Zoo()));
