@@ -14,7 +14,9 @@ namespace Lab2Zoo.Models
         public override void Add(Component component)
         {
             if (IsContainerCanContainsComponent(component))
-                Components.Add(component);            
+                Components.Add(component);
+            else
+                ThrowWrongComponentException(component);
         }       
 
         public Container GetContainerForAnimal(Animal animal)
