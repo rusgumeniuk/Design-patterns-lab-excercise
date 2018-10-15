@@ -84,8 +84,8 @@ namespace Lab2Zoo.Models
                 foreach (var item in Components)
                 {
                     if (item is Animal && (item as Animal).IsSleeping)
-                        stringBuilder.Append((item as Animal).WakeUp() + " : ");
-                    stringBuilder.Append(item.Voice());
+                        stringBuilder.Append((item as Animal).WakeUp());
+                    stringBuilder.AppendLine(item.Voice());
                 }
             }
 
