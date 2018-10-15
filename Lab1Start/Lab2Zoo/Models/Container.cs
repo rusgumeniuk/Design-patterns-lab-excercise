@@ -32,17 +32,41 @@ namespace Lab2Zoo.Models
 
         public virtual bool IsContainerCanContainsComponent(Component component)
         {
-            if (Components.Contains(component)) throw new ArgumentException("Component already in collection");
+            if (IsContainerAlreadyContainsComponent(component))
+                throw new ArgumentException(component + " is already is some container");
             if (component is Animal)
                 return IsContainerCanContainsAnimal(component as Animal);
             if (component is Container)
-                return IsContainerCanContainsContainer(component as Container);
+                return !IsContainerIsParentContainer(component as Container) && IsContainerCanContainsContainer(component as Container);
             return false;
         }
         public abstract bool IsContainerCanContainsContainer(Container innerContainer);
         public virtual bool IsContainerCanContainsAnimal(Animal animal)
         {
             return animal is Animal;
+        }
+        public virtual bool IsContainerIsParentContainer(Container container)
+        {
+            if (container.Components.Contains(this)) return true;
+            foreach (var component in container.Components)
+            {
+                if(component is Container)
+                {
+                    if ((component as Container).IsContainerIsParentContainer(this))
+                        return true;
+                }
+            }
+            return false;
+        }
+        public virtual bool IsContainerAlreadyContainsComponent(Component component)
+        {
+            if (Components.Contains(component)) return true;
+            foreach (var item in Components)
+            {
+                if((item is Container) && (item as Container).IsContainerAlreadyContainsComponent(component))
+                    return true;
+            }
+            return false;
         }
 
         public virtual bool IsChildCanContainsAnimal(Animal animal)
