@@ -23,22 +23,27 @@ namespace ZooXUnitTestProject.TestClasses.CagesTestClasses.BearCagesTestClasses
             innerCage = new BearCageFactory().CreateCage() as BearCage;
             femaleCage = new FemaleBearCageFactory().CreateCage() as BearFemaleCage;
             maleCage = new MaleBearCageFactory().CreateCage() as BearMaleCage;
-
+            
             bear = new BearFactory().CreateAnimal() as Bear;
         }
 
         [Fact]
-        public void Add_WhenAddAnimalToRandomCage_ReturnsTrue()
+        public void IsContainerCanContainsComponent_WhenCompIsContainersAndCan_ReturnsTrue()
         {
-            mainBearCage.Add(innerCage);
-            mainBearCage.Add(maleCage);
-            innerCage.Add(femaleCage);
+            Assert.True(mainBearCage.IsContainerCanContainsComponent(innerCage));
+            Assert.True(mainBearCage.IsContainerCanContainsComponent(femaleCage));
+            Assert.True(mainBearCage.IsContainerCanContainsComponent(maleCage));
 
+            Assert.True(innerCage.IsContainerCanContainsComponent(femaleCage));
+            Assert.True(innerCage.IsContainerCanContainsComponent(maleCage));
+        }
+
+        [Fact]
+        public void IsContainerCanContainsComponent_WhenCanNotContains_ReturnsFalse()
+        {
             bear.Male = Lab2Zoo.Models.Enums.MaleMode.Female;
-
-            Lab2Zoo.Models.Container container = mainBearCage.GetContainerForAnimal(bear);
-
-            Assert.Equal(femaleCage, container);
+            Assert.False(femaleCage.IsContainerCanContainsComponent(maleCage));
+            Assert.False(maleCage.IsContainerCanContainsComponent(bear));
         }
     }
 }
