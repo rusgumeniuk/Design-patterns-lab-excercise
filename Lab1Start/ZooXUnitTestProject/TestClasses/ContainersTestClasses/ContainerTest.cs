@@ -55,6 +55,27 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
         }
         #endregion
 
+        #region Add
+        [Fact]
+        public void Add_WhenCageAlreadyInZoo_ReturnsArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() => zoo.Add(mainBearCage));
+        }
+
+        [Fact]
+        public void Add_WhenBearAlreadyInCage_ReturnsArgumentException()
+        {
+            bearMaleCage.Add(maleBear);
+            Assert.Throws<ArgumentException>(() => bearMaleCage.Add(maleBear));
+        }
+
+        [Fact]
+        public void Add_WhenAddMaleBeartoFemaleCage_ReturnsTypeAccessException()
+        {
+            Assert.Throws<TypeAccessException>(() => bearFemaleCage.Add(maleBear));
+        }
+        #endregion
+
         #region IsContainerCanContainsComponent
         [Fact]
         public void IsContainerCanContainsComponent_WhenCompIsBears_ReturnsTrue()
