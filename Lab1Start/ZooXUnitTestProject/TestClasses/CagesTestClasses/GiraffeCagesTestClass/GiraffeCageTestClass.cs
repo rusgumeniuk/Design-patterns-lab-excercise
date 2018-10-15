@@ -45,7 +45,7 @@ namespace ZooXUnitTestProject.TestClasses.CagesTestClasses.GiraffeCagesTestClass
         [Fact]
         public void Add_WhenAnimalIsBear_ReturnArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => giraffeCage.Add(new BearFactory().CreateAnimal() as Bear))
+            Assert.Throws<TypeAccessException>(() => giraffeCage.Add(new BearFactory().CreateAnimal() as Bear))
 ;
         }
     }
