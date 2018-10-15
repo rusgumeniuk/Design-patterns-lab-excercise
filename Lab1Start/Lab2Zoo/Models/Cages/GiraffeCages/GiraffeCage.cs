@@ -11,14 +11,9 @@ namespace Lab2Zoo.Models.Cages.GiraffeCages
     {
         internal GiraffeCage() : base() { }
 
-        public override void Add(Component component)
+        public override bool IsContainerCanContainsAnimal(Animal animal)
         {
-            if (component is GiraffeCage || (component is Giraffe)) 
-            {
-                Components.Add(component);
-            }
-            else
-                ThrowWrongComponentException(component);
+            return animal is Giraffe;
         }
     }
 }

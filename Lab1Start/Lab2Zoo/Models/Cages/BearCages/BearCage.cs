@@ -11,16 +11,6 @@ namespace Lab2Zoo.Models.Cages.BearCages
     {
         internal BearCage() : base() { }
 
-        public override void Add(Component component)
-        {
-            if (component is BearCage || component is Bear)
-            {
-                Components.Add(component);
-            }
-            else
-                ThrowWrongComponentException(component);
-        }
-
         public override bool IsContainerCanContainsAnimal(Animal animal)
         {
             return animal is Bear;

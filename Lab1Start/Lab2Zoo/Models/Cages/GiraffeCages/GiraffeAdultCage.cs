@@ -11,14 +11,9 @@ namespace Lab2Zoo.Models.Cages.GiraffeCages
     {
         internal GiraffeAdultCage() : base() { }
 
-        public override void Add(Component component)
+        public override bool IsContainerCanContainsAnimal(Animal animal)
         {
-            if (component is GiraffeAdultCage || (component is Giraffe && (component as Giraffe).Age > 14)) 
-            {
-                Components.Add(component);
-            }
-            else
-                ThrowWrongComponentException(component, "It should be older");
+            return base.IsContainerCanContainsAnimal(animal) && (animal as Giraffe).Age > 14;
         }
     }
 }

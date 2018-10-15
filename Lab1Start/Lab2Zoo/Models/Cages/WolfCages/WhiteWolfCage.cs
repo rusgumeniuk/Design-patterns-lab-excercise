@@ -11,14 +11,9 @@ namespace Lab2Zoo.Models.Cages.WolfCages
     {
         internal WhiteWolfCage() : base() { }
 
-        public override void Add(Component component)
+        public override bool IsContainerCanContainsAnimal(Animal animal)
         {
-            if (component is WhiteWolfCage || component is WhiteWolf) 
-            {
-                Components.Add(component);
-            }
-            else
-                ThrowWrongComponentException(component);
+            return animal is WhiteWolf;
         }
     }
 }
