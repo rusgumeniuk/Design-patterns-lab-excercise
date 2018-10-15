@@ -10,11 +10,11 @@ namespace Lab2Zoo.Models.Cages
     public abstract class Cage<T> : Container
         where T : Animal
     {
-
         public override bool IsContainerCanContainsContainer(Container innerContainer)
         {
-            return innerContainer is Cage<T>;
-        }
+            return innerContainer.GetType().GetBaseTypes().Contains(this.GetType());
+        }  
+        
         public override string Voice()
         {
             StringBuilder stringBuilder = new StringBuilder();
