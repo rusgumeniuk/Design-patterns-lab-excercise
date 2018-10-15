@@ -16,7 +16,7 @@ namespace Lab2Zoo.Models.Animals
             get => weight;
             set
             {
-                if (value < 0)
+                if (value < 1)
                     throw new ArgumentException("Weight should be non-negative");
                 weight = value;
             }
