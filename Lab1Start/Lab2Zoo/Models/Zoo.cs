@@ -29,6 +29,23 @@ namespace Lab2Zoo.Models
                 CurrentDayMode = DayMode.Day;
         }
 
+        private void LetSleepSomeAnimal()
+        {
+            Random random = new Random();
+            foreach (var animal in GetAnimals())
+            {
+                animal.IsSleeping = random.Next(0, 10) > 2;
+            }
+        }        
+
+        private void WakeZooUp()
+        {
+            foreach (var animal in GetAnimals())
+            {
+                animal.IsSleeping = false;
+            }
+        }
+
         public override bool IsContainerCanContainsContainer(Container innerContainer)
         {
             return innerContainer is Cages.Cage<Animal>;
