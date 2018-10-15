@@ -12,8 +12,9 @@ namespace Lab2Zoo.Models
         public List<Component> Components = new List<Component>();       
       
         public override void Add(Component component)
-        {            
-            Components.Add(component);            
+        {
+            if (IsContainerCanContainsComponent(component))
+                Components.Add(component);            
         }       
 
         public Container GetContainerForAnimal(Animal animal)
@@ -26,6 +27,17 @@ namespace Lab2Zoo.Models
             else
                 return null;
         }
+
+        public virtual bool IsContainerCanContainsComponent(Component component)
+        {
+            if (component is Animal)
+                return IsContainerCanContainsAnimal(component as Animal);
+            if (component is Container)
+                return IsContainerCanContainsContainer(component as Container);
+            return false;
+        }
+
+        public abstract bool IsContainerCanContainsContainer(Container innerContainer);
 
         public static bool IsContainerCanContainsAnimal(Container container, Animal animal)
         {
