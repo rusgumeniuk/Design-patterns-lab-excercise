@@ -123,11 +123,5 @@ namespace Lab2Zoo.Models
         {
             Components.Remove(component);
         }
-
-        public override Component GetChild(int index)
-        {
-            if (index < 0 || index >= Components.Count) throw new IndexOutOfRangeException("'" + index + "' is wrong index");
-            return Components[index];
-        }
     }
 }

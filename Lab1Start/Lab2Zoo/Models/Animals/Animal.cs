@@ -49,10 +49,6 @@ namespace Lab2Zoo.Models.Animals
         {
             throw new InvalidOperationException();
         }
-        public override Component GetChild(int index)
-        {
-            throw new InvalidOperationException();
-        }
         public override int GetWeight()
         {
             return Weight;

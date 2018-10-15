@@ -18,7 +18,6 @@ namespace Lab2Zoo.Models
 
         public abstract void Add(Component component);
         public abstract void Remove(Component component);
-        public abstract Component GetChild(int index);
         public abstract int GetWeight();
         public abstract int GetAmountOfAnimals();
         public abstract List<Animal> GetAnimals();
