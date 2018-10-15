@@ -28,7 +28,12 @@ namespace Lab2Zoo.Models
             else
                 CurrentDayMode = DayMode.Day;
         }
-        
+
+        public override bool IsContainerCanContainsContainer(Container innerContainer)
+        {
+            return innerContainer is Cages.Cage<Animal>;
+        }
+
         public override string Voice()
         {
             StringBuilder stringBuilder = new StringBuilder();
