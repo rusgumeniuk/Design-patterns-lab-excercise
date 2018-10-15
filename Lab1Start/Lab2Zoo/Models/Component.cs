@@ -29,4 +29,20 @@ namespace Lab2Zoo.Models
             return GetType().Name + " " + Id;
         }
     }
+
+    public static class AdditionalTypeClass
+    {
+        public static Type[] GetBaseTypes(this Type type)
+        {
+            return type.BaseType == null ? null : GetBaseTypes(type, new List<Type>() { type }).ToArray();
+        }
+
+        private static List<Type> GetBaseTypes(this Type currentType, List<Type> types)
+        {
+            if (currentType.BaseType == null) return types;
+
+            types.Add(currentType.BaseType);
+            return GetBaseTypes(currentType.BaseType, types);
+        }
+    }
 }
