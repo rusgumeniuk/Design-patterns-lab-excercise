@@ -61,7 +61,7 @@ namespace Lab2Zoo.Models
 
         public override bool IsContainerCanContainsContainer(Container innerContainer)
         {
-            return innerContainer is Cages.Cage<Animal>;
+            return innerContainer is Container && !(innerContainer is Zoo);
         }
 
         public override string Voice()
