@@ -15,5 +15,10 @@ namespace Lab2Zoo.Models.Cages.WolfCages
         {
             return animal is WhiteWolf;
         }
+
+        public override bool IsContainerCanContainsContainer(Container innerContainer)
+        {
+            return innerContainer is WhiteWolfCage;
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Lab2Zoo.Models.Cages.WolfCages
         {
             return false;
         }
+
+        public override bool IsContainerCanContainsContainer(Container innerContainer)
+        {
+            return base.IsContainerCanContainsContainer(innerContainer) || innerContainer is WhiteWolfCage || innerContainer is GreyWolfCage;
+        }
     }
 }
