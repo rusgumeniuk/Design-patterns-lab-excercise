@@ -59,6 +59,10 @@ namespace Lab2Zoo.Models
             }
         }
 
+        public override bool IsContainerCanContainsAnimal(Animal animal)
+        {
+            return false;
+        }
         public override bool IsContainerCanContainsContainer(Container innerContainer)
         {
             return innerContainer is Container && !(innerContainer is Zoo);
