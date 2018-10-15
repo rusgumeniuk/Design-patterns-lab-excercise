@@ -13,7 +13,7 @@ namespace Lab2Zoo.Models.Cages.BearCages
 
         public override bool IsContainerCanContainsAnimal(Animal animal)
         {
-            return base.IsContainerCanContainsAnimal(animal) && (animal as Bear).Male == Enums.MaleMode.Male;
+            return base.IsContainerCanContainsAnimal(animal) && (animal as Bear).Male == Enums.MaleMode.Female;
         }
     }
 }
