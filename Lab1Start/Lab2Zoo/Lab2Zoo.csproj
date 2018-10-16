@@ -98,6 +98,7 @@
     <Compile Include="Models\Animals\Wolf.cs" />
     <Compile Include="Models\Cages\WolfCages\WhiteWolfCage.cs" />
     <Compile Include="Models\Cages\WolfCages\WolfCage.cs" />
+    <Compile Include="Models\Factories\ZooFactory.cs" />
     <Compile Include="Models\Zoo.cs" />
     <Compile Include="Models\Factories\AnimalFactories\WhiteWolfFactory.cs" />
     <Compile Include="Models\Factories\CageFactories\WolfCageFactory\WhiteWolfCageFactory.cs" />
