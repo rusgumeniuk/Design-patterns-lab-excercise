@@ -26,48 +26,26 @@ namespace Lab2Zoo
          TODO ChangeParentCage() to Component
          TODO GetParentContainer() to Component
          TODO IsInParentContainer() to Component
-         TODO Create List<Zoo> Zoos to Zoo
-         TODO CreateZoo() 
+         TODO Create List<Zoo> Zoos to Zoo OR Singletone()
         */
 
         #region Start info
-        readonly BearCageFactory bearCageFactory;
-        readonly FemaleBearCageFactory femaleBearCageFactory;
-        readonly MaleBearCageFactory maleBearCageFactory;
+        static readonly BearCageFactory bearCageFactory = new BearCageFactory();
+        static readonly FemaleBearCageFactory femaleBearCageFactory = new FemaleBearCageFactory();
+        static readonly MaleBearCageFactory maleBearCageFactory = new MaleBearCageFactory();
 
-        readonly GiraffeCageFactory giraffeCageFactory;
-        readonly AdultGiraffeCageFactory adultGiraffeCageFactory;
-        readonly ChildrenGiraffeCageFactory childrenGiraffeCageFactory;
+        static readonly GiraffeCageFactory giraffeCageFactory = new GiraffeCageFactory();
+        static readonly AdultGiraffeCageFactory adultGiraffeCageFactory = new AdultGiraffeCageFactory();
+        static readonly ChildrenGiraffeCageFactory childrenGiraffeCageFactory = new ChildrenGiraffeCageFactory();
 
-        readonly WolfCageFactory wolfCageFactory;
-        readonly WhiteWolfCageFactory whiteWolfCageFactory;
-        readonly GreyWolfCageFactory greyWolfCageFactory;
+        static readonly WolfCageFactory wolfCageFactory = new WolfCageFactory();
+        static readonly WhiteWolfCageFactory whiteWolfCageFactory = new WhiteWolfCageFactory();
+        static readonly GreyWolfCageFactory greyWolfCageFactory = new GreyWolfCageFactory();
 
-        readonly BearFactory bearFactory;
-        readonly GiraffeFactory giraffeFactory;
-        readonly WhiteWolfFactory whiteWolfFactory;
-        readonly GreyWolfFactory greyWolfFactory;
-
-        public Program()
-        {
-            bearCageFactory = new BearCageFactory();
-            femaleBearCageFactory = new FemaleBearCageFactory();
-            maleBearCageFactory = new MaleBearCageFactory();
-
-            giraffeCageFactory = new GiraffeCageFactory();
-            adultGiraffeCageFactory = new AdultGiraffeCageFactory();
-            childrenGiraffeCageFactory = new ChildrenGiraffeCageFactory();
-
-
-            wolfCageFactory = new WolfCageFactory();
-            whiteWolfCageFactory = new WhiteWolfCageFactory();
-            greyWolfCageFactory = new GreyWolfCageFactory();
-
-            bearFactory = new BearFactory();
-            giraffeFactory = new GiraffeFactory();
-            whiteWolfFactory = new WhiteWolfFactory();
-            greyWolfFactory = new GreyWolfFactory();
-        }
+        static readonly BearFactory bearFactory = new BearFactory();
+        static readonly GiraffeFactory giraffeFactory = new GiraffeFactory();
+        static readonly WhiteWolfFactory whiteWolfFactory = new WhiteWolfFactory();
+        static readonly GreyWolfFactory greyWolfFactory = new GreyWolfFactory();
         #endregion
 
         static Zoo zoo;
@@ -75,28 +53,38 @@ namespace Lab2Zoo
         static void Main(string[] args)
         {
             zoo = new Zoo();
-
-            Bear firstBear = new BearFactory().CreateAnimal() as Bear;
-            Animal randomAnimal = AnimalFactory.CreateRandomAnimal();
-
-            firstBear.Name = "First bear";
-            randomAnimal.Name = "Random animal";
-
-            firstBear.Weight = 15;
-            randomAnimal.Weight = 33;
-
-            BearCage bearCage = (new BearCageFactory().CreateCage() as BearCage);
+            BearCage bearCage = bearCageFactory.CreateCage() as BearCage;
+            BearFemaleCage bearFemaleCage = femaleBearCageFactory.CreateCage() as BearFemaleCage;
             zoo.Add(bearCage);
-            bearCage.Add(firstBear);
-            bearCage.Add(randomAnimal);
+            zoo.Add(bearFemaleCage);
+            Console.WriteLine(zoo.Components.Count);
+            Console.WriteLine("Hello");
+            while (true)
+            {
+                DisplayMainSwitcher();
+            }
 
-            Console.WriteLine(firstBear);
-            Console.WriteLine(randomAnimal);
+            //Bear firstBear = new BearFactory().CreateAnimal() as Bear;
+            //Animal randomAnimal = AnimalFactory.CreateRandomAnimal();
 
-            Console.WriteLine(bearCage + ":");
-            Console.WriteLine(bearCage.Voice());
+            //firstBear.Name = "First bear";
+            //randomAnimal.Name = "Random animal";
 
-            Console.WriteLine(zoo.GetAmountOfAnimals());
+            //firstBear.Weight = 15;
+            //randomAnimal.Weight = 33;
+
+            //BearCage bearCage = (new BearCageFactory().CreateCage() as BearCage);
+            //zoo.Add(bearCage);
+            //bearCage.Add(firstBear);
+            //bearCage.Add(randomAnimal);
+
+            //Console.WriteLine(firstBear);
+            //Console.WriteLine(randomAnimal);
+
+            //Console.WriteLine(bearCage + ":");
+            //Console.WriteLine(bearCage.Voice());
+
+            //Console.WriteLine(zoo.GetAmountOfAnimals());
 
             Console.ReadKey();
         }
@@ -127,12 +115,12 @@ namespace Lab2Zoo
                                 ShowInnerContainers(null);
                                 break;
                             }
-                            case 2:
+                        case 2:
                             {
                                 ShowInnerAnimals(null);
                                 break;
                             }
-                            case 3:
+                        case 3:
                             {
                                 Console.WriteLine("not complete");
                                 break;
@@ -151,12 +139,13 @@ namespace Lab2Zoo
 
         private static void ShowAllComponents(Container container)
         {
-            if(container == null)
+            if (container == null)
             {
                 container = zoo;
             }
-
-
+            StringBuilder stringBuilder = new StringBuilder();
+            container.GetComponents()?.ForEach(component => stringBuilder.AppendLine(component.ToString()));
+            Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one component in " + container);
         }
 
         private static void ShowInnerContainers(Container container)
