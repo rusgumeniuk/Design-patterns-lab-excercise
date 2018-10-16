@@ -32,7 +32,7 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
 
         public ZooTest()
         {
-            zoo = new Zoo();
+            zoo = Lab2Zoo.Models.Factories.ZooFactory.CreateZoo();
             giraffeCageFactory = new GiraffeCageFactory();
             giraffeFactory = new GiraffeFactory();
             bearFactory = new BearFactory();
@@ -97,7 +97,7 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
         [Fact]
         public void IsContainerCanContainsContainer_WhenAddZoo_ReturnsFalse()
         {
-            Assert.False(zoo.IsContainerCanContainsContainer(new Zoo()));
+            Assert.False(zoo.IsContainerCanContainsContainer(Lab2Zoo.Models.Factories.ZooFactory.CreateZoo()));
         }
 
         [Fact]

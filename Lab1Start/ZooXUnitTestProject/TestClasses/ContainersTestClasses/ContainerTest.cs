@@ -31,7 +31,7 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
 
         public ContainerTest()
         {
-            zoo = new Zoo();
+            zoo = Lab2Zoo.Models.Factories.ZooFactory.CreateZoo();
 
             bearCageFactory = new BearCageFactory();
             bearFemaleCageFactory = new FemaleBearCageFactory();
@@ -101,7 +101,7 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
         [Fact]
         public void IsContainerCanContainsComponent_WhenComponentIsZoo_ReturnFalse()
         {
-            Assert.False(zoo.IsContainerCanContainsComponent(new Zoo()));
+            Assert.False(zoo.IsContainerCanContainsComponent(Lab2Zoo.Models.Factories.ZooFactory.CreateZoo()));
         }
         #endregion
 

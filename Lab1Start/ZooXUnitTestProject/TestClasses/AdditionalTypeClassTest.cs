@@ -22,7 +22,7 @@ namespace ZooXUnitTestProject.TestClasses
         [Fact]
         public void GetBaseTypes_WhenZoo_ReturnsTrue()
         {   //obj <- component <- container <- zoo
-            Assert.Equal(4, new Zoo().GetType().GetBaseTypes().Length);
+            Assert.Equal(4, Lab2Zoo.Models.Factories.ZooFactory.CreateZoo().GetType().GetBaseTypes().Length);
             Assert.Contains(typeof(Component), typeof(Zoo).GetBaseTypes());
             Assert.Contains(typeof(Zoo), typeof(Zoo).GetBaseTypes());
         }
