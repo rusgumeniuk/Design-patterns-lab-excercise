@@ -141,19 +141,19 @@ namespace Lab2Zoo.Models
             }
             return containers.ToArray();
         }
-        public override List<Animal> GetAnimals()
+        public override Animal[] GetAnimals()
         {
             List<Animal> animals = new List<Animal>();
             foreach (var item in Components)
             {
                 animals.AddRange(item.GetAnimals());
             }
-            return animals;
+            return animals.ToArray();
         }
         public string GetAnimalsString()
         {
-            List<Animal> animals = GetAnimals();
-            if (animals.Count < 1) return "No one";
+            Animal[] animals = GetAnimals();
+            if (animals.Length < 1) return "No one";
             string result = String.Empty;
             foreach (var item in animals)
             {
