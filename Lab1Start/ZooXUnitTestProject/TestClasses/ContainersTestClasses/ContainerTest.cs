@@ -255,7 +255,7 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
             bearFemaleCage.Add(femaleBear);
             bearMaleCage.Add(maleBear);
 
-            Assert.Equal(2, zoo.GetAnimals().Count);
+            Assert.Equal(2, zoo.GetAnimals().Length);
             Assert.Contains(maleBear, zoo.GetAnimals());
         }
         #endregion        

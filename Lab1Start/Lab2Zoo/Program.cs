@@ -57,8 +57,18 @@ namespace Lab2Zoo
             BearFemaleCage bearFemaleCage = femaleBearCageFactory.CreateCage() as BearFemaleCage;
             zoo.Add(bearCage);
             zoo.Add(bearFemaleCage);
-            Console.WriteLine(zoo.Components.Count);
-            Console.WriteLine("Hello");
+
+            Bear femaleBear = bearFactory.CreateAnimal(Models.Enums.MaleMode.Female) as Bear;
+            Bear maleBear = bearFactory.CreateAnimal(Models.Enums.MaleMode.Male) as Bear;
+            femaleBear.Name = "Female bear";
+            maleBear.Name = "Male bear";
+
+            Container contForFemale = zoo.GetContainerForAnimal(femaleBear);
+            contForFemale.Add(femaleBear);
+
+            Container contForMale = zoo.GetContainerForAnimal(maleBear);
+            contForMale.Add(maleBear);
+            
             while (true)
             {
                 DisplayMainSwitcher();
@@ -144,7 +154,7 @@ namespace Lab2Zoo
                 container = zoo;
             }
             StringBuilder stringBuilder = new StringBuilder();
-            container.GetComponents()?.ForEach(component => stringBuilder.AppendLine(component.ToString()));
+            container.GetComponents()?.ToList().ForEach(component => stringBuilder.AppendLine(component.ToString()));
             Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one component in " + container);
         }
 
@@ -154,7 +164,9 @@ namespace Lab2Zoo
             {
                 container = zoo;
             }
-
+            StringBuilder stringBuilder = new StringBuilder();
+            container.GetContainers()?.ToList().ForEach(cont => stringBuilder.AppendLine(cont.ToString()));
+            Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one conteiner in " + container);
         }
 
         private static void ShowInnerAnimals(Container container)
@@ -163,6 +175,9 @@ namespace Lab2Zoo
             {
                 container = zoo;
             }
+            StringBuilder stringBuilder = new StringBuilder();
+            container.GetAnimals()?.ToList().ForEach(cont => stringBuilder.AppendLine(cont.ToString()));
+            Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one animal in " + container);
         }
     }
 }
