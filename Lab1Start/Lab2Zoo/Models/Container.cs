@@ -120,11 +120,10 @@ namespace Lab2Zoo.Models
 
         public override List<Component> GetComponents()
         {
-            if (Components.Count < 1) return null;
             List<Component> components = new List<Component>();
-
             foreach (var item in Components)
             {
+                components.Add(item);
                 components.AddRange(item.GetComponents());
             }
             return components;
