@@ -63,7 +63,7 @@ namespace Lab2Zoo.Models.Animals
         }
         public override Component[] GetComponents()
         {
-            return new Component[] { this };
+            return new Component[] {};
         }
 
         public override string ToString()
