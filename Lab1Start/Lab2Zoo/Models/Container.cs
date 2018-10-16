@@ -118,6 +118,17 @@ namespace Lab2Zoo.Models
             return count;
         }
 
+        public override List<Component> GetComponents()
+        {
+            if (Components.Count < 1) return null;
+            List<Component> components = new List<Component>();
+
+            foreach (var item in Components)
+            {
+                components.AddRange(item.GetComponents());
+            }
+            return components;
+        }
         public override List<Animal> GetAnimals()
         {
             List<Animal> animals = new List<Animal>();
