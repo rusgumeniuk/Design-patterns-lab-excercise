@@ -61,9 +61,9 @@ namespace Lab2Zoo.Models.Animals
         {
             return new List<Animal>() { this };
         }
-        public override List<Component> GetComponents()
+        public override Component[] GetComponents()
         {
-            return new List<Component>() { this };
+            return new Component[] { this };
         }
 
         public override string ToString()

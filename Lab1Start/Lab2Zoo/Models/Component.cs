@@ -21,7 +21,7 @@ namespace Lab2Zoo.Models
         public abstract int GetWeight();
         public abstract int GetAmountOfAnimals();
         public abstract List<Animal> GetAnimals();
-        public abstract List<Component> GetComponents();
+        public abstract Component[] GetComponents();
         public abstract string Voice();
 
         public override string ToString()

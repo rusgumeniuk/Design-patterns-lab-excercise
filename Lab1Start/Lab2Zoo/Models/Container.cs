@@ -118,7 +118,7 @@ namespace Lab2Zoo.Models
             return count;
         }
 
-        public override List<Component> GetComponents()
+        public override Component[] GetComponents()
         {
             List<Component> components = new List<Component>();
             foreach (var item in Components)
@@ -126,20 +126,20 @@ namespace Lab2Zoo.Models
                 components.Add(item);
                 components.AddRange(item.GetComponents());
             }
-            return components;
+            return components.ToArray();
         }
         public Container[] GetContainers()
-        {
-            if (Components.Count < 1) return null;
+        {            
             List<Container> containers = new List<Container>();
             foreach (var item in Components)
             {
                 if(item is Container)
                 {
+                    containers.Add(item as Container);
                     containers.AddRange((item as Container).GetContainers());
                 }
             }
-            return containers.Count > 0 ? containers.ToArray() : null;
+            return containers.ToArray();
         }
         public override List<Animal> GetAnimals()
         {
