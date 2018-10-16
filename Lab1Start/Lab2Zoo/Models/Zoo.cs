@@ -12,6 +12,8 @@ namespace Lab2Zoo.Models
     {
         public DayMode CurrentDayMode = DayMode.Day;
 
+        internal Zoo() : base() { }
+
         public Animal GetRandomAnimal()
         {
             return Factories.AnimalFactories.AnimalFactory.CreateRandomAnimal();
