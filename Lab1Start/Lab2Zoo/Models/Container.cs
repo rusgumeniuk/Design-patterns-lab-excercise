@@ -129,6 +129,19 @@ namespace Lab2Zoo.Models
             }
             return components;
         }
+        public Container[] GetContainers()
+        {
+            if (Components.Count < 1) return null;
+            List<Container> containers = new List<Container>();
+            foreach (var item in Components)
+            {
+                if(item is Container)
+                {
+                    containers.AddRange((item as Container).GetContainers());
+                }
+            }
+            return containers.Count > 0 ? containers.ToArray() : null;
+        }
         public override List<Animal> GetAnimals()
         {
             List<Animal> animals = new List<Animal>();
