@@ -21,8 +21,6 @@ namespace Lab2Zoo
     class Program
     {
         /*
-         TODO GetAllContainers() to Cont         
-         TODO GetAllComponents() to Component
          TODO ChangeParentCage() to Component
          TODO GetParentContainer() to Component
          TODO IsInParentContainer() to Component
@@ -49,10 +47,14 @@ namespace Lab2Zoo
         #endregion
 
         static Zoo zoo;
+        static Container currentContainer;
+        static Animal currentAnimal;
 
         static void Main(string[] args)
         {
             zoo = new Zoo();
+            currentContainer = zoo;
+
             BearCage bearCage = bearCageFactory.CreateCage() as BearCage;
             BearFemaleCage bearFemaleCage = femaleBearCageFactory.CreateCage() as BearFemaleCage;
             zoo.Add(bearCage);
@@ -95,8 +97,6 @@ namespace Lab2Zoo
             //Console.WriteLine(bearCage.Voice());
 
             //Console.WriteLine(zoo.GetAmountOfAnimals());
-
-            Console.ReadKey();
         }
 
         private static void DisplayMainSwitcher()
@@ -104,11 +104,11 @@ namespace Lab2Zoo
             while (true)
             {
                 string info =
-                               "Please input number of appropriate operation:" + "\n"
-                               + "0 : Show all components" + "\n"
-                               + "1 : Show all containers" + "\n"
-                               + "2 : Show all animals" + "\n"
-                               + "3 :"
+                               "Please input number of appropriate operation:" 
+                               + "\n" + "0 : Show all components" 
+                               + "\n" + "1 : Show all containers" 
+                               + "\n" + "2 : Show all animals" 
+                               //+ "\n"+ "3 :"
                                ;
                 Console.WriteLine(info);
                 if (byte.TryParse(Console.ReadLine(), out byte selectedNumber) || selectedNumber > 3)
@@ -117,16 +117,19 @@ namespace Lab2Zoo
                     {
                         case 0:
                             {
+                                Console.WriteLine("\nAll components in " + currentContainer + ":");
                                 ShowAllComponents(null);
                                 break;
                             }
                         case 1:
                             {
+                                Console.WriteLine("\nAll conteiners in " + currentContainer + ":");
                                 ShowInnerContainers(null);
                                 break;
                             }
                         case 2:
                             {
+                                Console.WriteLine("\nAll animals in " + currentContainer + ":");
                                 ShowInnerAnimals(null);
                                 break;
                             }
@@ -151,8 +154,11 @@ namespace Lab2Zoo
         {
             if (container == null)
             {
-                container = zoo;
+                container = currentContainer;
             }
+            else
+                currentContainer = container;
+
             StringBuilder stringBuilder = new StringBuilder();
             container.GetComponents()?.ToList().ForEach(component => stringBuilder.AppendLine(component.ToString()));
             Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one component in " + container);
@@ -162,8 +168,11 @@ namespace Lab2Zoo
         {
             if (container == null)
             {
-                container = zoo;
+                container = currentContainer;
             }
+            else
+                currentContainer = container;
+
             StringBuilder stringBuilder = new StringBuilder();
             container.GetContainers()?.ToList().ForEach(cont => stringBuilder.AppendLine(cont.ToString()));
             Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one conteiner in " + container);
@@ -173,8 +182,11 @@ namespace Lab2Zoo
         {
             if (container == null)
             {
-                container = zoo;
+                container = currentContainer;
             }
+            else
+                currentContainer = container;
+
             StringBuilder stringBuilder = new StringBuilder();
             container.GetAnimals()?.ToList().ForEach(cont => stringBuilder.AppendLine(cont.ToString()));
             Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one animal in " + container);
