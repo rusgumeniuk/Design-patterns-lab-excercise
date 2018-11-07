@@ -51,6 +51,8 @@ namespace Lab2Zoo.Models
             }
             return false;
         }
+       
+
 
         public abstract bool IsContainerCanContainsContainer(Container innerContainer);
         public bool IsContainerIsParentContainer(Container container)
@@ -77,6 +79,19 @@ namespace Lab2Zoo.Models
         {
             return GetChildContainerForAnimal(animal) != null;
         }
+
+        public Animal GetAnimalFromContainerByName(string animalName)
+        {
+            foreach (var component in Components)
+            {
+                if ((component is Animal) && (component as Animal).Name.Equals(animalName))
+                {
+                    return component as Animal;
+                }
+            }
+            return null;
+        }
+
         protected virtual Container GetChildContainerForAnimal(Animal animal)
         {
             foreach (var child in Components)
