@@ -70,5 +70,25 @@ namespace Lab2Zoo.Models.Animals
         {
             return this.GetType().Name + " '" + Name + "'";
         }
+        
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Animal animal = obj as Animal;
+
+            if (animal.Name.Trim().Equals(this.Name.Trim()))
+                return true;
+
+            return animal.Id.Equals(this.Id);        
+        }
+        
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode() ^ Id.GetHashCode() | (int)Weight.GetTypeCode();
+        }
     }
 }
