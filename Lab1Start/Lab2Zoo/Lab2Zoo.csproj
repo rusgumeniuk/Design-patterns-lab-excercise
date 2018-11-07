@@ -53,6 +53,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IOValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Development\VSProjects\IOValidationLibrary+\bin\Debug\IOValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -69,6 +73,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOValidators\ZooReader.cs" />
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Factories\CageFactories\CageFactory.cs" />
     <Compile Include="Models\Factories\CageFactories\GiraffeCageFactory\AdultGiraffeCageFactory.cs" />
