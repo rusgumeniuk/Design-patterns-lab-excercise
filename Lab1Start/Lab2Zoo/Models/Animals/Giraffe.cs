@@ -27,5 +27,10 @@ namespace Lab2Zoo.Models.Animals
         {
             return Id + ": Huuum";
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + " age is " + Age;
+        }
     }
 }
