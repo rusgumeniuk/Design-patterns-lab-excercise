@@ -33,8 +33,6 @@ namespace Lab2Zoo.Models
 
         public virtual bool IsContainerCanContainsComponent(Component component)
         {
-            if (IsContainerAlreadyContainsComponent(component))
-                throw new ArgumentException(component + " is already is some container");
             if (component is Animal)
                 return IsContainerCanContainsAnimal(component as Animal);
             if (component is Container)
