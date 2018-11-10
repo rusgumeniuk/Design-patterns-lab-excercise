@@ -43,16 +43,19 @@ namespace Lab2Zoo.Models
         }
         public bool IsContainerAlreadyContainsComponent(Component component)
         {
-            if (Components.Contains(component)) return true;
+            return GetContainerWithComponent(component) != null;
+        }
+       
+        public Container GetContainerWithComponent(Component component)
+        {
+            if (Components.Contains(component)) return this;
             foreach (var item in Components)
             {
                 if ((item is Container) && (item as Container).IsContainerAlreadyContainsComponent(component))
-                    return true;
+                    return item as Container;
             }
-            return false;
+            return null;
         }
-       
-
 
         public abstract bool IsContainerCanContainsContainer(Container innerContainer);
         public bool IsContainerIsParentContainer(Container container)
