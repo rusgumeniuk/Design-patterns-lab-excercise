@@ -7,7 +7,7 @@ namespace Lab2Zoo.Models.Animals
 {
     public abstract class Animal : Component
     {
-        private string name = "Unknown";
+        private string name = "Unknown" + DateTime.Now.Millisecond;
         private ushort weight = 0;
         public bool IsSleeping = false;
 
@@ -64,17 +64,7 @@ namespace Lab2Zoo.Models.Animals
         public override Component[] GetComponents()
         {
             return new Component[] {};
-        }
-
-        public void ChangeContainer(Zoo currentZoo, Container newContainer)
-        {
-            Container oldContaienr = currentZoo.GetContainerWithComponent(this);
-            if (oldContaienr != null)
-            {
-                oldContaienr.Components.Remove(this);
-            }
-            newContainer.Add(this);
-        }
+        }       
 
         public override string ToString()
         {
