@@ -73,6 +73,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOValidators\ZooConsole.cs" />
     <Compile Include="IOValidators\ZooReader.cs" />
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Factories\CageFactories\CageFactory.cs" />
