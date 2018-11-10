@@ -66,6 +66,16 @@ namespace Lab2Zoo.Models.Animals
             return new Component[] {};
         }
 
+        public void ChangeContainer(Zoo currentZoo, Container newContainer)
+        {
+            Container oldContaienr = currentZoo.GetContainerWithComponent(this);
+            if (oldContaienr != null)
+            {
+                oldContaienr.Components.Remove(this);
+            }
+            newContainer.Add(this);
+        }
+
         public override string ToString()
         {
             return this.GetType().Name + " '" + Name + "'";
