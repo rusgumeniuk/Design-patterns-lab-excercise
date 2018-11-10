@@ -59,14 +59,14 @@ namespace ZooXUnitTestProject.TestClasses.ContainersTestClasses
         [Fact]
         public void Add_WhenCageAlreadyInZoo_ReturnsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => zoo.Add(mainBearCage));
+            Assert.Throws<TypeAccessException>(() => zoo.Add(mainBearCage));
         }
 
         [Fact]
         public void Add_WhenBearAlreadyInCage_ReturnsArgumentException()
         {
             bearMaleCage.Add(maleBear);
-            Assert.Throws<ArgumentException>(() => bearMaleCage.Add(maleBear));
+            Assert.Throws<TypeAccessException>(() => bearMaleCage.Add(maleBear));
         }
 
         [Fact]
