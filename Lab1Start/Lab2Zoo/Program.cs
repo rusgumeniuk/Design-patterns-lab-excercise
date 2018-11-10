@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Lab2Zoo.IOValidators;
+
 using Lab2Zoo.Models;
 using Lab2Zoo.Models.Animals;
 using Lab2Zoo.Models.Cages;
@@ -46,14 +48,13 @@ namespace Lab2Zoo
         static readonly GreyWolfFactory greyWolfFactory = new GreyWolfFactory();
         #endregion
 
-        static Zoo zoo;
-        static Container currentContainer;
-        static Animal currentAnimal;
+        static ZooConsole console;
+        static Zoo zoo;                
 
         static void Main(string[] args)
         {
             zoo = new Zoo();
-            currentContainer = zoo;
+            console = ZooConsole.GetInstance(zoo);            
 
             BearCage bearCage = bearCageFactory.CreateCage() as BearCage;
             BearFemaleCage bearFemaleCage = femaleBearCageFactory.CreateCage() as BearFemaleCage;
@@ -64,6 +65,8 @@ namespace Lab2Zoo
             Bear maleBear = bearFactory.CreateAnimal(Models.Enums.MaleMode.Male) as Bear;
             femaleBear.Name = "Female bear";
             maleBear.Name = "Male bear";
+            femaleBear.Weight = 40;
+            maleBear.Weight = 130;
 
             Container contForFemale = zoo.GetContainerForAnimal(femaleBear);
             contForFemale.Add(femaleBear);
@@ -73,7 +76,7 @@ namespace Lab2Zoo
             
             while (true)
             {
-                DisplayMainSwitcher();
+               console.DisplayMainMenu();
             }
 
             //Bear firstBear = new BearFactory().CreateAnimal() as Bear;
@@ -99,97 +102,28 @@ namespace Lab2Zoo
             //Console.WriteLine(zoo.GetAmountOfAnimals());
         }
 
-        private static void DisplayMainSwitcher()
-        {
-            while (true)
-            {
-                string info =
-                               "Please input number of appropriate operation:" 
-                               + "\n" + "0 : Show all components" 
-                               + "\n" + "1 : Show all containers" 
-                               + "\n" + "2 : Show all animals" 
-                               //+ "\n"+ "3 :"
-                               ;
-                Console.WriteLine(info);
-                if (byte.TryParse(Console.ReadLine(), out byte selectedNumber) || selectedNumber > 3)
-                {
-                    switch (selectedNumber)
-                    {
-                        case 0:
-                            {
-                                Console.WriteLine("\nAll components in " + currentContainer + ":");
-                                ShowAllComponents(null);
-                                break;
-                            }
-                        case 1:
-                            {
-                                Console.WriteLine("\nAll conteiners in " + currentContainer + ":");
-                                ShowInnerContainers(null);
-                                break;
-                            }
-                        case 2:
-                            {
-                                Console.WriteLine("\nAll animals in " + currentContainer + ":");
-                                ShowInnerAnimals(null);
-                                break;
-                            }
-                        case 3:
-                            {
-                                Console.WriteLine("not complete");
-                                break;
-                            }
-                        default:
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Wrong selected number. Try Again!");
-                    continue;
-                }
-            }
-        }
-
-        private static void ShowAllComponents(Container container)
-        {
-            if (container == null)
-            {
-                container = currentContainer;
-            }
-            else
-                currentContainer = container;
-
-            StringBuilder stringBuilder = new StringBuilder();
-            container.GetComponents()?.ToList().ForEach(component => stringBuilder.AppendLine(component.ToString()));
-            Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one component in " + container);
-        }
-
-        private static void ShowInnerContainers(Container container)
-        {
-            if (container == null)
-            {
-                container = currentContainer;
-            }
-            else
-                currentContainer = container;
-
-            StringBuilder stringBuilder = new StringBuilder();
-            container.GetContainers()?.ToList().ForEach(cont => stringBuilder.AppendLine(cont.ToString()));
-            Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one conteiner in " + container);
-        }
-
-        private static void ShowInnerAnimals(Container container)
-        {
-            if (container == null)
-            {
-                container = currentContainer;
-            }
-            else
-                currentContainer = container;
-
-            StringBuilder stringBuilder = new StringBuilder();
-            container.GetAnimals()?.ToList().ForEach(cont => stringBuilder.AppendLine(cont.ToString()));
-            Console.WriteLine(stringBuilder.Length > 0 ? stringBuilder.ToString() : "No one animal in " + container);
-        }
+       
     }
 }
+
+/*
+ TODO
+    Back to main menu
+    Work with container
+        create container
+        select container
+            clear container
+            move container to container
+            get all in cont
+            get all weight
+            get all voice
+
+    Work with animal
+        create animal
+        create random container
+        select animal (to move, edit info etc)
+            move animal to container
+            edit animal info
+
+
+ */
