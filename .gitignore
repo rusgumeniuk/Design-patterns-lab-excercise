@@ -16,7 +16,8 @@
 /Lab1Start/Lab1Start/obj/Debug
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/IOValidation.dll
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/IOValidation.pdb
-/Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/Lab2Zoo.exe
+/Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/Lab2Zoo.exe1
+*.exe
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/Lab2Zoo.pdb
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
@@ -26,3 +27,4 @@
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/ZooXUnitTestProject.pdb
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/ZooXUnitTestProject.runtimeconfig.dev.json
 /Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1/ZooXUnitTestProject.runtimeconfig.json
+/Lab1Start/ZooXUnitTestProject/bin/Release/netcoreapp2.1
