@@ -18,5 +18,10 @@ namespace Lab2Zoo.Models.Animals
         {
             return Id +  ": Grrrrr";
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + " male is " + Male;
+        }
     }
 }

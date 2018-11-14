@@ -13,7 +13,7 @@ namespace Lab2Zoo.Models
       
         public override void Add(Component component)
         {
-            if (IsContainerCanContainsComponent(component))
+            if (IsContainerCanContainsComponent(component) && !IsContainerAlreadyContainsComponent(component))
                 Components.Add(component);
             else
                 ThrowWrongComponentException(component);
@@ -33,8 +33,6 @@ namespace Lab2Zoo.Models
 
         public virtual bool IsContainerCanContainsComponent(Component component)
         {
-            if (IsContainerAlreadyContainsComponent(component))
-                throw new ArgumentException(component + " is already is some container");
             if (component is Animal)
                 return IsContainerCanContainsAnimal(component as Animal);
             if (component is Container)
@@ -43,13 +41,18 @@ namespace Lab2Zoo.Models
         }
         public bool IsContainerAlreadyContainsComponent(Component component)
         {
-            if (Components.Contains(component)) return true;
+            return GetContainerWithComponent(component) != null;
+        }
+       
+        public Container GetContainerWithComponent(Component component)
+        {
+            if (Components.Contains(component)) return this;
             foreach (var item in Components)
             {
                 if ((item is Container) && (item as Container).IsContainerAlreadyContainsComponent(component))
-                    return true;
+                    return item as Container;
             }
-            return false;
+            return null;
         }
 
         public abstract bool IsContainerCanContainsContainer(Container innerContainer);
@@ -77,6 +80,19 @@ namespace Lab2Zoo.Models
         {
             return GetChildContainerForAnimal(animal) != null;
         }
+
+        public Animal GetAnimalFromContainerByName(string animalName)
+        {
+            foreach (var component in Components)
+            {
+                if ((component is Animal) && (component as Animal).Name.Equals(animalName))
+                {
+                    return component as Animal;
+                }
+            }
+            return null;
+        }
+
         protected virtual Container GetChildContainerForAnimal(Animal animal)
         {
             foreach (var child in Components)

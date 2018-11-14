@@ -23,6 +23,15 @@ namespace Lab2Zoo.Models
         public abstract Animal[] GetAnimals();
         public abstract Component[] GetComponents();
         public abstract string Voice();
+        public void ChangeContainer(Zoo currentZoo, Container newContainer)
+        {
+            Container oldContaienr = currentZoo.GetContainerWithComponent(this);
+            if (oldContaienr != null)
+            {
+                oldContaienr.Components.Remove(this);
+            }
+            newContainer.Add(this);
+        }
 
         public override string ToString()
         {

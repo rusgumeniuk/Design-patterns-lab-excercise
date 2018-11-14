@@ -14,7 +14,7 @@ namespace Lab2Zoo.Models.Cages.WolfCages
 
         public override bool IsContainerCanContainsAnimal(Animal animal)
         {
-            return false;
+             return IsChildCanContainsAnimal(animal);
         }
 
         public override bool IsContainerCanContainsContainer(Container innerContainer)
